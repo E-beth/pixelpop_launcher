@@ -2,7 +2,7 @@ var mixtape_games = {
 
 	slow_growing : { 
 		title : "Slow Growing", 
-		author : "Ebeth, @electronicbeth", 
+		author : "Ebeth, @electronicbeth, ebethnorvell.com", 
 		src : "games/slow_growing.html",  
 		blurb : "A small snail wants to have a big garden. 🐌🌱"
 	},
