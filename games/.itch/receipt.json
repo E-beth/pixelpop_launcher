@@ -1,0 +1,67 @@
+{
+  "cave": {
+    "id": "15fb31f5-51d1-41e2-8cba-7328d203086a",
+    "gameId": 348832,
+    "game": {
+      "pOsx": false,
+      "id": 348832,
+      "publishedAt": "2018-12-25 18:46:20",
+      "url": "https://le-onionboi.itch.io/manster-mansion",
+      "coverUrl": "https://img.itch.zone/aW1nLzE3MzQ0NjUuZ2lm/315x250%23c/JFp3XB.gif",
+      "pAndroid": false,
+      "pLinux": false,
+      "createdAt": "2018-12-22 00:04:49",
+      "pWindows": false,
+      "hasDemo": false,
+      "title": "a Night at Manster Mansion",
+      "inPressSystem": false,
+      "canBeBought": false,
+      "stillCoverUrl": "https://img.itch.zone/aW1nLzE3MzQ0NjUuZ2lm/315x250%23cm/QgVRfX.gif",
+      "minPrice": 0,
+      "classification": "game",
+      "shortText": "Solve the murder mystery at the mysterious Manster Mansion!",
+      "type": "html",
+      "embed": {
+        "fullscreen": true,
+        "height": 512,
+        "width": 512
+      },
+      "userId": 387836
+    },
+    "uploadId": 1207468,
+    "uploads": {
+      "1207468": {
+        "filename": "GAME.zip",
+        "pWindows": false,
+        "pOsx": false,
+        "id": 1207468,
+        "createdAt": "2018-12-29 22:31:57",
+        "demo": false,
+        "md5Hash": "143510a6be3292091b73c0ac3e53c6d7",
+        "storage": "hosted",
+        "size": 10647292,
+        "pLinux": false,
+        "gameId": 348832,
+        "preorder": false,
+        "updatedAt": "2018-12-29 22:34:38",
+        "position": 0,
+        "pAndroid": false,
+        "type": "html",
+        "score": 200
+      }
+    },
+    "installLocation": "appdata",
+    "installFolder": "a Night at Manster Mansion",
+    "pathScheme": 2,
+    "handPicked": false,
+    "fresh": true
+  },
+  "files": [
+    "GAME/Cavern.mp3",
+    "GAME/Cemetary_Clown.mp3",
+    "GAME/Fioj.mp3",
+    "GAME/Generations_Away.mp3",
+    "GAME/index.html",
+    "GAME/The_Night_Before.mp3"
+  ]
+}
