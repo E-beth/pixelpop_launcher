@@ -5,6 +5,9 @@ function createWindow () {
     frame: false,
     backgroundColor: '#000000',
     fullscreen: true,
+    webPreferences: {
+      nodeIntegration: true,
+    }
   });
 
   win.loadFile('./src/index.html');
