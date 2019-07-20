@@ -2,8 +2,13 @@
   "name": "pixelpop_sololauncher",
   "version": "0.1.0",
   "description": ":yeenaw:",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/E-beth/pixelpop_sololauncher.git"
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "node ./build"
+  },
+  "devDependencies": {
+    "fs-extra": "^8.1.0",
+    "electron": "^5.0.7"
   }
 }
