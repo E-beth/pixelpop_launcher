@@ -9,7 +9,7 @@ fs.emptyDirSync(outputDir);
 
 fs.copySync('./node_modules/electron/dist', outputDir);
 fs.emptyDirSync(path.join(outputDir, 'resources/app'));
-fs.copySync('./src', path.join(outputDir, 'resources/app'));
+fs.copySync('./src', path.join(outputDir, 'resources/app/src'));
 fs.copySync('./package.json', path.join(outputDir, 'resources/app/package.json'));
 rcedit(path.join(outputDir, 'electron.exe'), {
 	'version-string': package.version,
