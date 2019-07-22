@@ -1,0 +1,293 @@
+/* border-box everything for easier dev */
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* scrollbars */
+/* firefox */
+* {
+	scrollbar-color: rgba(128, 128, 128, 0.2) transparent;
+	scrollbar-width: thin;
+}
+
+*:hover {
+	scrollbar-color: rgba(128, 128, 128, 0.5) transparent;
+}
+
+/* chrome */
+*::-webkit-scrollbar {
+	width: 0.5rem;
+	height: 0.5rem;
+	background: none;
+}
+
+*::-webkit-scrollbar-corner {
+	background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 0.25rem;
+	background: rgba(128, 128, 128, 0.2);
+}
+
+*:hover::-webkit-scrollbar-thumb {
+	background: rgba(128, 128, 128, 0.5);
+}
+
+button {
+	all: unset;
+	appearance: none;
+	-webkit-appearance: none;
+	cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	padding: 0;
+	margin: 0;
+}
+
+.ui-btn {
+	background: black;
+	color: white;
+	border: solid 1px white;
+	padding: 0.2rem 0.4rem;
+	transition:
+		background-color 80ms ease-in-out,
+		color 80ms ease-in-out;
+}
+
+.ui-btn:hover:not(:active) {
+	background: white;
+	color: black;
+}
+
+.ui-btn .material-icons {
+	font-size: 18px;
+	vertical-align: middle;
+	line-height: 100%;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background: white;
+	font-family: "Nunito";
+}
+
+#select_screen {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: background 1s, color 1s;
+	display: flex;
+	flex-direction: column;
+}
+
+#select_screen>header {
+	flex: none;
+	padding: 0.5rem;
+	background: black;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+#select_screen>header>* {
+	flex: none;
+}
+
+#select_screen>header>h1 {
+	text-align: center;
+	flex: auto;
+	margin: 0 auto;
+}
+
+#select_screen>main {
+	flex: auto;
+	height: 100%;
+	display: flex;
+}
+
+#game_select,
+#game_info {
+	overflow-y: auto;
+	padding: 1rem;
+}
+
+#game_select {
+	flex: 3;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+	grid-gap: 1rem;
+	grid-auto-rows: min-content;
+}
+
+#game_info {
+	flex: 2;
+	max-width: 40rem;
+}
+
+#play_screen {
+	height: 100%;
+	color: white;
+	display: none;
+	flex-direction: column;
+}
+
+#loading {
+	flex: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	font-size: 30px;
+}
+
+#loading::after {
+	font-family: monospace;
+	content: "";
+	animation: ellipsis 1s infinite;
+}
+
+@keyframes ellipsis {
+	0% {
+		content: "\00a0\00a0\00a0";
+	}
+
+	25% {
+		content: ".\00a0\00a0";
+	}
+
+	50% {
+		content: "..\00a0";
+	}
+
+	75% {
+		content: "...";
+	}
+
+	100% {
+		content: "\00a0\00a0\00a0";
+	}
+}
+
+#play_screen>iframe {
+	flex: auto;
+	border: 0;
+}
+
+#play_control {
+	padding: 0.5rem;
+	background: black;
+	border-top: solid 2px white;
+	display: flex;
+	align-items: flex-end;
+}
+
+#play_control>* {
+	flex: none;
+}
+
+#select_screen>header>*:not(:last-child),
+#play_control>*:not(:last-child) {
+	margin-right: 0.5rem;
+}
+
+#play_control>h1 {
+	text-align: center;
+	flex: auto;
+	margin: 0 auto;
+	font-size: inherit;
+}
+
+#play_control>h1>* {
+	display: block;
+}
+
+#play_title {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.game_card {
+	background: black;
+	color: white;
+	padding: 0.5rem;
+	border: solid 2px black;
+	contain: content;
+}
+
+.game_card>*:not(:last-child) {
+	margin-bottom: 0.5rem;
+}
+
+.game_card figure {
+	padding: 0;
+	margin: 0;
+	height: 0;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-bottom: 100%;
+}
+
+.game_card:hover {
+	background: white;
+	color: black;
+	border-color: white;
+	outline: solid 4px white;
+}
+
+.selected_card {
+	border-color: white;
+	outline: solid 4px black;
+}
+
+.selected_card:hover {
+	border-color: black;
+}
+
+#game_info_play_button {
+	padding: 0.5rem 2rem;
+	font-size: 20px;
+}
+
+#about_bitsy {
+	position: fixed;
+	top: 0;
+	left: 0;
+	max-height: calc(100vh - 6rem);
+	background: black;
+	color: white;
+	margin: 3rem;
+	padding: 2rem;
+	border: solid 1px white;
+	overflow-y: auto;
+}
+
+#about_bitsy>*:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+#about_bitsy blockquote {
+	padding: 0;
+	margin: 0;
+}
+
+#about_bitsy blockquote footer::before {
+	content: "— ";
+}
+
+img {
+	image-rendering: pixelated;
+}

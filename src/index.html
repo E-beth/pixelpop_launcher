@@ -1,280 +1,88 @@
 <!DOCTYPE HTML>
 <html>
 
-	<head>
-		<title>Bitsy Zone</title>
+<head>
+	<title>BITSY ZONE</title>
 
-		<meta charset='utf-8'>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/png" href="./icon.ico">
 
-		<script src="mixtape.js"></script>
+	<script src="mixtape.js"></script>
 
-		<!-- electron style -->
-		<style>
-			html {
-				-webkit-user-select: none;
-			}
+	<link href="./style/normalize.css" rel="stylesheet">
+	<link href="./style/style.css" rel="stylesheet">
+	<link href="./style/electron.css" rel="stylesheet">
+	<link href="./style/gameStyles.css" rel="stylesheet">
 
-			#top_bar {
-				-webkit-app-region: drag;
-			}
+	<!-- FONTS -->
+	<link href="./style/googleNunito.css" rel="stylesheet">
+	<link href="./style/googleMaterialIcons.css" rel="stylesheet">
+</head>
 
-			#top_bar button {
-				-webkit-app-region: no-drag;
-			}
-		</style>
-		<style>
-			html, body {
-				width: 100%;
-				height: 100%;
-				margin: 0;
-				background: white;
-				font-family: "Nunito";
-			}
-
-			#select_screen {
-				width: 100%;
-				height: 100%;
-				/*display: none;*/
-				transition: background 1s, color 1s;
-			}
-
-			#top_bar {
-				width: calc(100% - 20px);
-				padding: 10px;
-				height: calc(7% - 20px);
-				background: black;
-				color: white;
-				/*text-align: center;*/
-				display: flex;
-				flex-flow: horizontal;
-			}
-
-			#game_select {
-				width: 59%;
-				height: 90%;
-				/*background: red;*/
-				padding: 15px;
-				overflow: scroll;
-				float: left;
-				white-space: normal;
-			}
-
-			#game_info {
-				width: calc(40% - 80px);
-				height: 90%;
-				padding: 30px;
-				padding-top: 0px;
-				overflow: scroll;
-				float:left;
-				/*background: blue;*/
-			}
-
-			#play_screen {
-				width: 100%;
-				height: 100%;
-				color: white;
-				display: none;
-			}
-
-			#game_frame {
-				width: 100%;
-				height: 90%;
-				border: 0;
-				margin: 0;
-				position: absolute;
-				top: 0;
-
-			}
-
-			#play_control {
-				padding: 15px;
-				width: calc(100% - 30px);
-				height: calc(10% - 32px);
-				background: black;
-				margin: 0;
-				display: flex;
-				flex-flow: horizontal;
-				border-top: solid 2px white;
-			}
-
-			.game_card {
-				background: black;
-				color: white;
-				display: inline-block;
-				width: 150px;
-				height: 200px;
-				padding: 10px;
-				margin: 10px;
-				border: solid 2px black;
-				outline: solid 4px black;
-				vertical-align: bottom;
-			}
-
-			.game_card:hover {
-				background: white;
-				color: black;
-				border: solid 2px white;
-				outline: solid 4px white;
-			}
-
-			.game_card h4 {
-				margin-top: 5px;
-			}
-
-			.selected_card {
-				border: solid 2px white;
-			}
-
-			.selected_card:hover {
-				border: solid 2px black;
-			}
-
-			#loading {
-				width: 100%;
-				height: 50vh;
-				border: 0;
-				margin: 0;
-				color: black;
-				text-align: center;
-				padding-top: 40vh;
-				font-size: 30px;
-			}
-
-			button {
-				background: black;
-				color: white;
-				border: solid 1px white;
-			}
-
-			button:hover {
-				background: white;
-				color: black;
-			}
-
-			button .material-icons {
-				font-size: 18px;
-				vertical-align: middle;
-				line-height: 100%;
-			}
-
-			#game_info_play_button {
-				width: 150px;
-				margin-top: 10px;
-				margin-left: 0px;
-				margin-right: 20px;
-				padding: 5px;
-				font-size: 20px;
-			}
-
-			#game_info_title {
-				margin-bottom: 0px;
-			}
-
-			#game_info_author {
-				margin-top: 0px;
-			}
-
-			#play_title {
-				font-weight: bold;
-				font-size: 20px;
-				padding-right: 15px;
-			}
-
-			a {
-				color: black;
-			}
-
-			#about_bitsy {
-				position: absolute;
-				background: black;
-				color: white;
-				margin: 5%;
-				padding: 3%;
-			}
-
-		</style>
-
-		<link href="./style/gameStyles.css" rel="stylesheet">
-
-		<!-- FONTS -->
-		<link href="./style/googleNunito.css" rel="stylesheet">
-		<link href="./style/googleMaterialIcons.css" rel="stylesheet">
-
-	</head>
-
-	<body onload="start();">
-		<div id="select_screen">
-			<div id="top_bar">				
-				<div style="flex:1;">
-					<button onclick="document.getElementById('about_bitsy').style.display='block';">about bitsy & the zone</button>
-				</div>
-				<div style="flex:2;text-align:center;">
-					BITSY ZONE
-				</div>
-				<div style="flex:1;">
-					<button onclick="playRandomGame();" style="float:right;">
-						<i class="material-icons">shuffle</i>
-						play random
-					</button>
-				</div>
-			</div>
-			<div id="game_select">
-			</div>
-			<div id="game_info">
+<body onload="start();">
+	<div id="select_screen">
+		<header>
+			<button class="ui-btn" onclick="document.getElementById('about_bitsy').style.display='block';">about bitsy
+				&amp; the zone</button>
+			<h1>BITSY ZONE</h1>
+			<button class="ui-btn" onclick="playRandomGame();">
+				<i class="material-icons">shuffle</i> play random
+			</button>
+		</header>
+		<main>
+			<section id="game_select"></section>
+			<aside id="game_info">
 				<h2 id="game_info_title"></h2>
 				<h3 id="game_info_author"></h3>
 				<p id="game_info_blurb"></p>
-				<button id="game_info_play_button">
+				<button class="ui-btn" id="game_info_play_button">
 					<i class="material-icons">play_arrow</i> play!
 				</button>
-			</div>
-			<div id="about_bitsy" style="display:none;" onclick="document.getElementById('about_bitsy').style.display='none';">
+			</aside>
+		</main>
+		<div id="about_bitsy" style="display:none;"
+			onclick="document.getElementById('about_bitsy').style.display='none';">
+			<blockquote>
 				Bitsy is a tiny game engine for making little games, world, and stories.
 				When I made it, I chose limits - the 8x8 pixel art, the interactivity
-				limited to walking and talking - that help keep the focus on making a story, 
+				limited to walking and talking - that help keep the focus on making a story,
 				but I never could have predicted all the creative ways folks would turn
 				those limits inside out.
-				<br/><br/>
-				- Adam Le Doux, Creator of Bitsy
-				<br/><br/>
+				<footer>Adam Le Doux, Creator of Bitsy</footer>
+			</blockquote>
+			<blockquote>
 				It's the Bitsy Zone, YEAH! Join the candle fanclub.
-				<br/><br/>
-				- Emma Daues, probably
-				<br/><br/>
-				<button><i class="material-icons">clear</i>close</button>
-			</div>
+				<footer>Emma Daues, probably</footer>
+			</blockquote>
+			<button class="ui-btn"><i class="material-icons">clear</i>close</button>
 		</div>
+	</div>
 
-		<div id="play_screen">
-			<div id="loading">
-				loading
-			</div>
-			<iframe id="game_frame" src=""></iframe>
-			<div id="play_control">
-				<div style="flex:1;">
-					<button id="play_exit_button">
-						<i class="material-icons">clear</i>
-						exit
-					</button>
-					<button id="play_restart_button">
-						<i class="material-icons">refresh</i>
-						restart
-					</button>
-				</div>
-				<div style="flex:1;text-align:center;">
-					<span id="play_title"></span>
-					<span id="play_author"></span>
-				</div>
-				<div style="flex:1;text-align:right;">
-					<button id="play_random_button">
-						<i class="material-icons">shuffle</i>
-						play random
-					</button>
-				</div>
-			</div>
+	<div id="play_screen">
+		<div id="loading">loading</div>
+		<iframe id="game_frame" src=""></iframe>
+		<div id="play_control">
+			<button class="ui-btn" id="play_exit_button">
+				<i class="material-icons">clear</i>
+				exit
+			</button>
+			<button class="ui-btn" id="play_restart_button">
+				<i class="material-icons">refresh</i>
+				restart
+			</button>
+			<h1>
+				<span id="play_title"></span>
+				<span id="play_author"></span>
+			</h1>
+			<button class="ui-btn" id="play_random_button">
+				<i class="material-icons">shuffle</i>
+				play random
+			</button>
 		</div>
+	</div>
 
-		<script src="electron.js"></script>
-	</body>
+	<script src="electron.js"></script>
+</body>
 
 </html>

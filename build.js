@@ -15,5 +15,5 @@ rcedit(path.join(outputDir, 'electron.exe'), {
 	'version-string': package.version,
 	'file-version': package.version,
 	'product-version': package.version,
-	icon: './icon.ico',
+	icon: './src/icon.ico',
 });

@@ -60,11 +60,12 @@ function start() {
 }
 
 function recreateGameList() {
-	document.getElementById("game_select").innerHTML = "";
+	var el = document.querySelector("#game_select");
+	el.textContent = "";
 	var shuffledGames = makeShuffledGameList();
 	for(var i in shuffledGames) {
 		var gameId = shuffledGames[i];
-		document.getElementById("game_select").appendChild( makeGameCard(gameId) );
+		el.appendChild( makeGameCard(gameId) );
 	}
 }
 
@@ -110,8 +111,8 @@ function selectRandomGame() {
 function makeGameCard(gameId) {
 	var game = mixtape_games[gameId];
 
-	var div = document.createElement("div");
-	div.onclick = function() {
+	var card = document.createElement("button");
+	card.onclick = function() {
 		if(selectedGameId != gameId) {
 			selectGame(gameId,slowTimer);
 		}
@@ -119,24 +120,22 @@ function makeGameCard(gameId) {
 			playGame(gameId);
 		}
 	};
-	div.id = "card_" + gameId;
-	div.classList.add("game_card");
+	card.id = "card_" + gameId;
+	card.classList.add("game_card");
 
-	var gif = document.createElement("img");
-	gif.src = "images/" + gameId + ".gif";
-	gif.width = 150;
-	gif.height = 150;
-	div.appendChild(gif);
+	var gif = document.createElement("figure");
+	gif.style.backgroundImage = `url(images/${gameId}.gif)`;
+	card.appendChild(gif);
 
 	var title = document.createElement("h4");
 	title.innerText = game.title;
-	div.appendChild(title);
+	card.appendChild(title);
 
 	// var author = document.createElement("h5");
 	// author.innerText = game.author;
-	// div.appendChild(author);
+	// card.appendChild(author);
 
-	return div;
+	return card;
 }
 
 var selectedGameId = null;
@@ -204,7 +203,7 @@ function playGame(gameId) {
 	}
 
 	document.getElementById("select_screen").style.display = "none";
-	document.getElementById("play_screen").style.display = "block";
+	document.getElementById("play_screen").style.display = "flex";
 
 	document.getElementById("play_title").innerText = game.title;
 	document.getElementById("play_author").innerHTML = game.author;
@@ -214,17 +213,22 @@ function playGame(gameId) {
 	document.getElementById("play_random_button").onclick = playRandomGame;
 
 	var frame = document.getElementById("game_frame");
+	frame.style.display = 'none';
 	frame.src = "";
-
-	window.setTimeout(function(){
-		frame.src = game.src;
-		frame.focus();
-	}, 200);
+	frame.onload = function() {
+		document.getElementById('loading').style.display = 'none';
+		frame.style.display = 'block';
+		setTimeout(() => {
+			frame.focus();
+		});
+	};
+	document.getElementById('loading').style.display = 'flex';
+	frame.src = game.src;
 }
 
 function exitPlayScreen() {
 	document.getElementById("game_frame").src = "";
-	document.getElementById("select_screen").style.display = "block";
+	document.getElementById("select_screen").style.display = "flex";
 	document.getElementById("play_screen").style.display = "none";
 
 	recreateGameList();

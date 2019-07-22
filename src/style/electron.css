@@ -1,0 +1,14 @@
+/* prevent user-selection */
+html {
+	-webkit-user-select: none;
+}
+
+/* allow user to drag app via header */
+header {
+	-webkit-app-region: drag;
+}
+
+/* prevent drag on buttons inside header */
+header button {
+	-webkit-app-region: no-drag;
+}
