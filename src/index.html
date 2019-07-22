@@ -8,6 +8,20 @@
 
 		<script src="mixtape.js"></script>
 
+		<!-- electron style -->
+		<style>
+			html {
+				-webkit-user-select: none;
+			}
+
+			#top_bar {
+				-webkit-app-region: drag;
+			}
+
+			#top_bar button {
+				-webkit-app-region: no-drag;
+			}
+		</style>
 		<style>
 			html, body {
 				width: 100%;
@@ -118,7 +132,7 @@
 			#loading {
 				width: 100%;
 				height: 50vh;
-				bo1222222222222222222222222222222222222222211rder: 0;
+				border: 0;
 				margin: 0;
 				color: black;
 				text-align: center;
@@ -180,11 +194,11 @@
 
 		</style>
 
-		<link href="style/gameStyles.css" rel="stylesheet">
+		<link href="./style/gameStyles.css" rel="stylesheet">
 
 		<!-- FONTS -->
-		<link href="style/googleNunito.css" rel="stylesheet">
-		<link href="style/googleMaterialIcons.css" rel="stylesheet">
+		<link href="./style/googleNunito.css" rel="stylesheet">
+		<link href="./style/googleMaterialIcons.css" rel="stylesheet">
 
 	</head>
 
@@ -259,6 +273,8 @@
 				</div>
 			</div>
 		</div>
+
+		<script src="electron.js"></script>
 	</body>
 
 </html>

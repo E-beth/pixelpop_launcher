@@ -1,0 +1,15 @@
+{
+  "name": "pixelpop_sololauncher",
+  "version": "0.1.0",
+  "description": ":yeenaw:",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "node ./build"
+  },
+  "devDependencies": {
+    "electron": "^5.0.7",
+    "fs-extra": "^8.1.0",
+    "rcedit": "^2.0.0"
+  }
+}
