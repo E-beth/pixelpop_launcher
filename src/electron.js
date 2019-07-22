@@ -5,13 +5,12 @@
 		return;
 	}
 	const remote = require('electron').remote;
-	const el = document.querySelector('#top_bar > :last-child');
+	const el = document.querySelector('#select_screen > header');
 	const closeBtn = document.createElement('button');
 	closeBtn.textContent = 'X';
-	closeBtn.style.float = 'right';
-	closeBtn.style.marginLeft = '0.5rem';
+	closeBtn.className = 'ui-btn';
 	closeBtn.onclick = () => {
 		remote.getCurrentWindow().close();
 	};
-	el.prepend(closeBtn);
+	el.appendChild(closeBtn);
 }());
