@@ -158,7 +158,12 @@ function selectGame(gameId,timer) {
 
 	var game = mixtape_games[gameId];
 
-	document.getElementById("card_" + gameId).classList.add("selected_card");
+	var selectedCard = document.getElementById("card_" + gameId);
+	selectedCard.classList.add("selected_card");
+	selectedCard.scrollIntoView({
+		behavior: 'smooth',
+		block: 'center',
+	});
 
 	document.getElementById("game_info_title").innerText = game.title;
 	document.getElementById("game_info_author").innerHTML = game.author;
