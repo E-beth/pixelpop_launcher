@@ -143,6 +143,14 @@ var nextGameTimer = null;
 var fastTimer = 6000;
 var slowTimer = 60000;
 
+// prevent from jumping around while a player is actively browsing
+document.addEventListener('mousemove', function() {
+	if (nextGameTimer) {
+		clearTimeout(nextGameTimer);
+		nextGameTimer = window.setTimeout(selectRandomGame, slowTimer);
+	}
+});
+
 function selectGame(gameId,timer) {
 	if(timer == undefined || timer == null)
 		timer = fastTimer;
