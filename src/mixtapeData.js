@@ -1,4 +1,5 @@
-var mixtape_games = {
+var solo = true; // toggle this to switch between collab/solo data
+var mixtape_games = solo ? {
 	// solo
 	slow_growing: {
 		title: "Slow Growing",
@@ -56,6 +57,7 @@ var mixtape_games = {
 		blurb: "A short experience about two friends and two teas!",
 		colors: ['#ae8e9e', '#ebebc8'],
 	},
+} : {
 	// collabs
 	mystery_dungeon: {
 		title: "BITSY MYSTERY DUNGEON",
