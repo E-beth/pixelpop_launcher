@@ -106,7 +106,6 @@ function selectGame(gameId, timer) {
 
 	if (selectedGameId != null) {
 		document.getElementById("card_" + selectedGameId).classList.remove("selected_card");
-		document.getElementById("select_screen").classList.remove(selectedGameId);
 	}
 
 	selectedGameId = gameId;
@@ -120,6 +119,8 @@ function selectGame(gameId, timer) {
 		block: 'center',
 	});
 
+	document.getElementById("select_screen").style.backgroundColor = game.colors[0];
+	document.getElementById("select_screen").style.color = game.colors[1];
 	document.getElementById("game_info_title").innerText = game.title;
 	document.getElementById("game_info_author").innerHTML = game.author;
 	//	document.getElementById("game_info_img").src = "images/" + gameId + ".gif";
