@@ -127,9 +127,15 @@ body {
 	flex: 3;
 	height: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
 	grid-gap: 1rem;
 	grid-auto-rows: min-content;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+@media only screen and (max-width: 50rem) {
+	#game_select {
+		grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+	}
 }
 
 #game_info {
@@ -225,6 +231,8 @@ body {
 	padding: 0.5rem;
 	border: solid 2px black;
 	contain: content;
+	display: flex;
+	flex-direction: column;
 }
 
 .game_card>*:not(:last-child) {
