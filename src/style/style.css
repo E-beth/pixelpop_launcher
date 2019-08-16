@@ -66,6 +66,10 @@ h5 {
 	color: black;
 }
 
+.ui-btn:focus {
+	outline: solid 1px white;
+}
+
 .ui-btn .material-icons {
 	font-size: 18px;
 	vertical-align: middle;
