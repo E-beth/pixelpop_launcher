@@ -60,12 +60,13 @@ function makeGameCard(gameId) {
 	var game = mixtape_games[gameId];
 
 	var card = document.createElement("button");
-	card.onclick = function () {
+	card.onfocus = function () {
 		if (selectedGameId != gameId) {
 			selectGame(gameId, slowTimer);
-		} else {
-			playGame(gameId);
 		}
+	};
+	card.ondblclick = function () {
+		playGame(gameId);
 	};
 	card.id = "card_" + gameId;
 	card.classList.add("game_card");
@@ -118,6 +119,7 @@ function selectGame(gameId, timer) {
 		behavior: 'smooth',
 		block: 'center',
 	});
+	selectedCard.focus();
 
 	document.getElementById("select_screen").style.backgroundColor = game.colors[0];
 	document.getElementById("select_screen").style.color = game.colors[1];
@@ -199,4 +201,158 @@ function exitPlayScreen() {
 
 function restartGame() {
 	playGame(selectedGameId);
+}
+
+// genericized input
+function onInput({
+	x = 0,
+	y = 0,
+	confirm = false,
+	cancel = false,
+}) {
+	if (x > 0) {
+		const card = document.getElementById("card_" + selectedGameId);
+		const target = card.nextSibling || card.parentElement.children[0];
+		target.focus();
+	} else if (x < 0) {
+		const card = document.getElementById("card_" + selectedGameId);
+		const target = card.previousSibling || card.parentElement.children[card.parentElement.children.length - 1];
+		target.focus();
+	}
+	if (y > 0) {
+		const card = document.getElementById("card_" + selectedGameId);
+		const { x: cx } = card.getBoundingClientRect();
+		const offset = Array.from(card.parentElement.children).indexOf(card);
+		for (let i = 1; i < card.parentElement.childElementCount; ++i) {
+			const target = card.parentElement.children[(offset+i)%card.parentElement.childElementCount];
+			const { x: tx } = target.getBoundingClientRect();
+			if (tx === cx) {
+				target.focus();
+				break;
+			}
+		}
+	} else if (y < 0) {
+		const card = document.getElementById("card_" + selectedGameId);
+		const { x: cx } = card.getBoundingClientRect();
+		const offset = Array.from(card.parentElement.children).indexOf(card);
+		for (let i = 1; i < card.parentElement.childElementCount; ++i) {
+			let idx = offset-i;
+			if (idx < 0) {
+				idx += card.parentElement.childElementCount;
+			}
+			const target = card.parentElement.children[idx];
+			const { x: tx } = target.getBoundingClientRect();
+			if (tx === cx) {
+				target.focus();
+				break;
+			}
+		}
+	}
+
+	if (confirm) {
+		// HACK: this is a bit silly but works generically b/c if a card is selected,
+		// its double click listener will be triggered,
+		// and then the iframe will be clicked (doing nothing)
+		// or, a selected button will be doubleclicked (doing nothing),
+		// and then clicked, triggering standard behaviour
+		document.activeElement.dispatchEvent(new MouseEvent('dblclick'));
+		document.activeElement.dispatchEvent(new MouseEvent('click'));
+	}
+
+	if (cancel) {
+		const exit = document.getElementById("play_exit_button");
+		exit && exit.onclick && exit.onclick();
+	}
+}
+
+// keyboard input
+window.addEventListener('keydown', function ({
+	key
+}) {
+	switch (key) {
+		case 'd':
+		case 'ArrowRight':
+			return onInput({
+				x: 1
+			});
+		case 'a':
+		case 'ArrowLeft':
+			return onInput({
+				x: -1
+			});
+		case 'w':
+		case 'ArrowUp':
+			return onInput({
+				y: -1
+			});
+		case 's':
+		case 'ArrowDown':
+			return onInput({
+				y: 1
+			});
+		case 'z':
+		case 'Enter':
+		case ' ':
+			return onInput({
+				confirm: true
+			});
+		case 'x':
+		case 'Escape':
+			return onInput({
+				cancel: true
+			});
+		default:
+			return;
+	}
+});
+
+// gamepad input
+
+const gamepads = window.inputGamepads;
+if (!gamepads) {
+	console.warn('gamepad input API not found');
+} else {
+	gamepads.init();
+
+	function gamepadUpdate() {
+		let x = 0;
+		let y = 0;
+		let confirm = false;
+		let cancel = false;
+		if (gamepads.isJustDown(gamepads.DPAD_RIGHT) || gamepads.axisJustPast(gamepads.LSTICK_H, 0.5, 1)) {
+			x += 1;
+		}
+		if (gamepads.isJustDown(gamepads.DPAD_LEFT) || gamepads.axisJustPast(gamepads.LSTICK_H, -0.5, -1)) {
+			x -= 1;
+		}
+		if (gamepads.isJustDown(gamepads.DPAD_DOWN) || gamepads.axisJustPast(gamepads.LSTICK_V, 0.5, 1)) {
+			y += 1;
+		}
+		if (gamepads.isJustDown(gamepads.DPAD_UP) || gamepads.axisJustPast(gamepads.LSTICK_V, -0.5, -1)) {
+			y -= 1;
+		}
+		if (gamepads.isJustDown(gamepads.A) || gamepads.isJustDown(gamepads.START)) {
+			confirm = true;
+		}
+		if (gamepads.isJustDown(gamepads.BACK)) {
+			cancel = true;
+		}
+
+		onInput({
+			x,
+			y,
+			confirm,
+			cancel,
+		});
+
+		gamepads.update();
+	}
+
+	function loop(fn) {
+		(function l() {
+			fn();
+			requestAnimationFrame(l);
+		}());
+	}
+	loop(gamepadUpdate);
 }

@@ -11,5 +11,8 @@
     "electron": "^5.0.7",
     "fs-extra": "^8.1.0",
     "rcedit": "^2.0.0"
+  },
+  "dependencies": {
+    "input-gamepads.js": "^2.0.2"
   }
 }
