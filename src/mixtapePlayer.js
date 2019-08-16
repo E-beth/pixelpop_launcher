@@ -207,6 +207,7 @@ function restartGame() {
 function onInput({
 	x = 0,
 	confirm = false,
+	cancel = false,
 }) {
 	if (x > 0) {
 		const card = document.getElementById("card_" + selectedGameId);
@@ -226,6 +227,11 @@ function onInput({
 		// and then clicked, triggering standard behaviour
 		document.activeElement.dispatchEvent(new MouseEvent('dblclick'));
 		document.activeElement.dispatchEvent(new MouseEvent('click'));
+	}
+
+	if (cancel) {
+		const exit = document.getElementById("play_exit_button");
+		exit && exit.onclick && exit.onclick();
 	}
 }
 
@@ -249,6 +255,11 @@ window.addEventListener('keydown', function ({
 		case ' ':
 			return onInput({
 				confirm: true
+			});
+		case 'x':
+		case 'Escape':
+			return onInput({
+				cancel: true
 			});
 		default:
 			return;
