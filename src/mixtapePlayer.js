@@ -309,46 +309,50 @@ window.addEventListener('keydown', function ({
 // gamepad input
 
 const gamepads = window.inputGamepads;
-gamepads.init();
+if (!gamepads) {
+	console.warn('gamepad input API not found');
+} else {
+	gamepads.init();
 
-function gamepadUpdate() {
-	let x = 0;
-	let y = 0;
-	let confirm = false;
-	let cancel = false;
-	if (gamepads.isJustDown(gamepads.DPAD_RIGHT) || gamepads.axisJustPast(gamepads.LSTICK_H, 0.5, 1)) {
-		x += 1;
-	}
-	if (gamepads.isJustDown(gamepads.DPAD_LEFT) || gamepads.axisJustPast(gamepads.LSTICK_H, -0.5, -1)) {
-		x -= 1;
-	}
-	if (gamepads.isJustDown(gamepads.DPAD_DOWN) || gamepads.axisJustPast(gamepads.LSTICK_V, 0.5, 1)) {
-		y += 1;
-	}
-	if (gamepads.isJustDown(gamepads.DPAD_UP) || gamepads.axisJustPast(gamepads.LSTICK_V, -0.5, -1)) {
-		y -= 1;
-	}
-	if (gamepads.isJustDown(gamepads.A) || gamepads.isJustDown(gamepads.START)) {
-		confirm = true;
-	}
-	if (gamepads.isJustDown(gamepads.BACK)) {
-		cancel = true;
+	function gamepadUpdate() {
+		let x = 0;
+		let y = 0;
+		let confirm = false;
+		let cancel = false;
+		if (gamepads.isJustDown(gamepads.DPAD_RIGHT) || gamepads.axisJustPast(gamepads.LSTICK_H, 0.5, 1)) {
+			x += 1;
+		}
+		if (gamepads.isJustDown(gamepads.DPAD_LEFT) || gamepads.axisJustPast(gamepads.LSTICK_H, -0.5, -1)) {
+			x -= 1;
+		}
+		if (gamepads.isJustDown(gamepads.DPAD_DOWN) || gamepads.axisJustPast(gamepads.LSTICK_V, 0.5, 1)) {
+			y += 1;
+		}
+		if (gamepads.isJustDown(gamepads.DPAD_UP) || gamepads.axisJustPast(gamepads.LSTICK_V, -0.5, -1)) {
+			y -= 1;
+		}
+		if (gamepads.isJustDown(gamepads.A) || gamepads.isJustDown(gamepads.START)) {
+			confirm = true;
+		}
+		if (gamepads.isJustDown(gamepads.BACK)) {
+			cancel = true;
+		}
+
+		onInput({
+			x,
+			y,
+			confirm,
+			cancel,
+		});
+
+		gamepads.update();
 	}
 
-	onInput({
-		x,
-		y,
-		confirm,
-		cancel,
-	});
-
-	gamepads.update();
+	function loop(fn) {
+		(function l() {
+			fn();
+			requestAnimationFrame(l);
+		}());
+	}
+	loop(gamepadUpdate);
 }
-
-function loop(fn) {
-	(function l() {
-		fn();
-		requestAnimationFrame(l);
-	}());
-}
-loop(gamepadUpdate);
