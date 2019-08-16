@@ -60,12 +60,13 @@ function makeGameCard(gameId) {
 	var game = mixtape_games[gameId];
 
 	var card = document.createElement("button");
-	card.onclick = function () {
+	card.onfocus = function () {
 		if (selectedGameId != gameId) {
 			selectGame(gameId, slowTimer);
-		} else {
-			playGame(gameId);
 		}
+	};
+	card.ondblclick = function () {
+		playGame(gameId);
 	};
 	card.id = "card_" + gameId;
 	card.classList.add("game_card");
