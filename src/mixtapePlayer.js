@@ -206,6 +206,7 @@ function restartGame() {
 // genericized input
 function onInput({
 	x = 0,
+	confirm = false,
 }) {
 	if (x > 0) {
 		const card = document.getElementById("card_" + selectedGameId);
@@ -215,6 +216,16 @@ function onInput({
 		const card = document.getElementById("card_" + selectedGameId);
 		const target = card.previousSibling || card.parentElement.children[card.parentElement.children.length - 1];
 		target.focus();
+	}
+
+	if (confirm) {
+		// HACK: this is a bit silly but works generically b/c if a card is selected,
+		// its double click listener will be triggered,
+		// and then the iframe will be clicked (doing nothing)
+		// or, a selected button will be doubleclicked (doing nothing),
+		// and then clicked, triggering standard behaviour
+		document.activeElement.dispatchEvent(new MouseEvent('dblclick'));
+		document.activeElement.dispatchEvent(new MouseEvent('click'));
 	}
 }
 
@@ -232,6 +243,12 @@ window.addEventListener('keydown', function ({
 		case 'ArrowLeft':
 			return onInput({
 				x: -1
+			});
+		case 'z':
+		case 'Enter':
+		case ' ':
+			return onInput({
+				confirm: true
 			});
 		default:
 			return;
