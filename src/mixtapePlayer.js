@@ -119,6 +119,7 @@ function selectGame(gameId, timer) {
 		behavior: 'smooth',
 		block: 'center',
 	});
+	selectedCard.focus();
 
 	document.getElementById("select_screen").style.backgroundColor = game.colors[0];
 	document.getElementById("select_screen").style.color = game.colors[1];
