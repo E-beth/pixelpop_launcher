@@ -202,3 +202,38 @@ function exitPlayScreen() {
 function restartGame() {
 	playGame(selectedGameId);
 }
+
+// genericized input
+function onInput({
+	x = 0,
+}) {
+	if (x > 0) {
+		const card = document.getElementById("card_" + selectedGameId);
+		const target = card.nextSibling || card.parentElement.children[0];
+		target.focus();
+	} else if (x < 0) {
+		const card = document.getElementById("card_" + selectedGameId);
+		const target = card.previousSibling || card.parentElement.children[card.parentElement.children.length - 1];
+		target.focus();
+	}
+}
+
+// keyboard input
+window.addEventListener('keydown', function ({
+	key
+}) {
+	switch (key) {
+		case 'd':
+		case 'ArrowRight':
+			return onInput({
+				x: 1
+			});
+		case 'a':
+		case 'ArrowLeft':
+			return onInput({
+				x: -1
+			});
+		default:
+			return;
+	}
+});
