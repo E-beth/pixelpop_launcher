@@ -206,6 +206,7 @@ function restartGame() {
 // genericized input
 function onInput({
 	x = 0,
+	y = 0,
 	confirm = false,
 	cancel = false,
 }) {
@@ -217,6 +218,35 @@ function onInput({
 		const card = document.getElementById("card_" + selectedGameId);
 		const target = card.previousSibling || card.parentElement.children[card.parentElement.children.length - 1];
 		target.focus();
+	}
+	if (y > 0) {
+		const card = document.getElementById("card_" + selectedGameId);
+		const { x: cx } = card.getBoundingClientRect();
+		const offset = Array.from(card.parentElement.children).indexOf(card);
+		for (let i = 1; i < card.parentElement.childElementCount; ++i) {
+			const target = card.parentElement.children[(offset+i)%card.parentElement.childElementCount];
+			const { x: tx } = target.getBoundingClientRect();
+			if (tx === cx) {
+				target.focus();
+				break;
+			}
+		}
+	} else if (y < 0) {
+		const card = document.getElementById("card_" + selectedGameId);
+		const { x: cx } = card.getBoundingClientRect();
+		const offset = Array.from(card.parentElement.children).indexOf(card);
+		for (let i = 1; i < card.parentElement.childElementCount; ++i) {
+			let idx = offset-i;
+			if (idx < 0) {
+				idx += card.parentElement.childElementCount;
+			}
+			const target = card.parentElement.children[idx];
+			const { x: tx } = target.getBoundingClientRect();
+			if (tx === cx) {
+				target.focus();
+				break;
+			}
+		}
 	}
 
 	if (confirm) {
@@ -249,6 +279,16 @@ window.addEventListener('keydown', function ({
 		case 'ArrowLeft':
 			return onInput({
 				x: -1
+			});
+		case 'w':
+		case 'ArrowUp':
+			return onInput({
+				y: -1
+			});
+		case 's':
+		case 'ArrowDown':
+			return onInput({
+				y: 1
 			});
 		case 'z':
 		case 'Enter':
