@@ -121,8 +121,10 @@ function selectGame(gameId, timer) {
 	});
 	selectedCard.focus();
 
-	document.getElementById("select_screen").style.backgroundColor = game.colors[0];
-	document.getElementById("select_screen").style.color = game.colors[1];
+	var selectScreenEl = document.getElementById("select_screen");
+	var loadingEl = document.getElementById("loading");
+	loadingEl.style.backgroundColor = selectScreenEl.style.backgroundColor = game.colors[0];
+	loadingEl.style.color = selectScreenEl.style.color = game.colors[1];
 	document.getElementById("game_info_title").innerText = game.title;
 	document.getElementById("game_info_author").innerHTML = game.author;
 	//	document.getElementById("game_info_img").src = "images/" + gameId + ".gif";
@@ -142,7 +144,7 @@ function selectGame(gameId, timer) {
 		playGame(gameId);
 	};
 
-	document.getElementById("select_screen").classList.add(selectedGameId);
+	selectScreenEl.classList.add(selectedGameId);
 
 	if (nextGameTimer != null)
 		window.clearTimeout(nextGameTimer);
