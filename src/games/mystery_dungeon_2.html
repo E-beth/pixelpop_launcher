@@ -32946,8 +32946,69 @@ Let us know what you think @bitsypcs!
 DLG SPR_2
 """
 UNDERGROUND GACHAPON
-- Out of order -
-Guess you'll just have to hold on to your {print prize_tokens} tokens for now.
+
+{sequence
+	- It's a prize dispenser! Looks like it takes tokens.
+	- {
+		- prizes_redeemed == 46 ?
+		Looks like it ran out of prizes! Guess you'll just have to hold on to the rest of your tokens!
+		- prize_tokens == 0 ?
+		You don't have any tokens with you though.
+		You'll need to find some to redeem prizes!
+		- else ?
+		You currently have {print prize_tokens} prize tokens.
+		You place one in and pull the lever.
+		A moment later, something pops out:{prize_tokens = prize_tokens - 1}{prizes_redeemed = prizes_redeemed + 1}
+		{shuffle
+			- A shining set of polyhedral dice. The 20 on the d20 has been replaced with a duck.
+			- A bag of soup, which breaks when you grab it. Ah shit, now you're all messy...
+			- A glass terrarium containing an entire miniature forest.
+			- its..... dark
+			- ...It's just a piece of paper with "SRRY IOU 1 KOOL PRYZ" scribbled on it.
+			- A live hermit crab about the size of your fist. Its "shell" is a coffee cup.
+			- A live snake. It will be your best friend, but it's not a prize it just lives in the machine. After chatting for a while it slithers back into the machine.
+			- a coin that has a picture of a cat on one side, and says: "I'm a cat" on the other side
+			- The spore of an exotic fungus, neatly preserved in an ornate glass housing.
+			- An isometric voucher for "One Free Archaeology - Only Enthusiasts Need Apply"
+			- A fortune cookie that seems slightly below average. The paper inside doesn't have much on it: "bitly/bitsy_d2prize". I wonder what it means?
+			- You reel up what seems to be... a load-bearing screw to a crane machin- WHAA!! CRASH! Tinkle tinkle.
+			- A tiny pink axolotl
+			- It's... two prize tokens? Doesn't seem like a very good return...{prize_tokens = prize_tokens + 2}
+			- a spherical orange gem. You swallow it, and your skin becomes slightly, but noticeably, luminescent.
+			- It's a note: "Attention: this is a note to inform you of the forthcoming prize for this slot. This is a placeholder used to indicate that the prize will be included in the future, but the date at which this will occur is, at the time of writing, unknown. The prize itself is to be determined, but an announcement will be made to inform you when this is finalized. Given current circumstances, the details of this announcement are to be announced. We appreciate your as of yet unconfirmed understanding of this matter."
+			- A chunky plastic comb with a loose handle. You pull out the handle to reveal a small knife blade.
+			- a worn brass locket with a "c" on one side and an "m" on the other. it's stuck shut
+			- a bucket hat covered in bobbers, hooks, and sinkers
+			- a pink flamingo keychain. It glows pink in the dark.
+			- A dusty, decaying tome. When you open it, a glass eye falls out of a hidden compartment carved into the pages. Its kaleidoscopic iris is hypnotic, the colors and patterns ever-changing.
+			- A worn garfield comic from 27/1/1991. Garfield's burly phisique intimidates you.
+			- A worn pair of bongos that on closer inspection seem to connect to some form of video game 
+			- the deed to your very own hall with bridge! Now to set up a booth and collect those sweet bridge tolls.
+			- a tin of loose leaf tea
+			- a mug shaped like an owl. the rim has a little chip in it. 
+			- a toy rat with a plastic cigarette in its mouth. you spend five minutes hypothesizing about its target audience.
+			- a mysterious orb. Upon shaking, one face displays a number. "Nice," you chuckle.
+			- an antique telescope. even in the depths of the dungeon, you still see the stars
+			- a tea kettle painted with an image of some sort of penguin king, proudly displaying his royal tea cups.
+			- an intricately carved puzzle box. When you open it, a strange black goo pours out.
+			- a small wooden box with a lock of purple hair inside
+			- "some dumb crumpled up paper... someone's math homework?: “I’m reduced to 15 year old fisticuffs now versus Mom’s hoary lodger, crabstick-skinned Steven Howard Junior, over cable charges, over Something called 'Eat My Hot Bavarian Log.' He says he never watched it, calls my mom / A parody of her former self. / I swear to the RNG gods I’ll Knock his fucking block off
+			- For lying to my poor mother. I mean, shit, we’re Practically the same Height.” ...???"
+			- a hummingbird! She sits upon your shoulder, ready for whatever journeying lies ahead.
+			- A box that looks unremarkable & boring, but what you find inside it will change the way you feel about the monster under your bed.
+			- A plastic toy dinosaur
+			- Hot chocolate to keep you warm <3
+			- That's right, iiiiiiiit's SLIME!
+			- your hand. It is unexpectedly heavy.
+			- A small ornamental dagger with a rat carved on the handle.
+			- A can of worms. You decide it's best to leave it closed.
+			- the worlds nicest grandma!
+			- a fluffey kittey
+			- It's a rock to wind a piece of string around. Oh sweet, everybody wants that.
+			- It's a brick from that wall that's missing a brick. Geez.
+		}
+	}
+}
 """
 
 DLG BECSPR_0
@@ -41943,6 +42004,9 @@ VAR mystery_number
 0
 
 VAR prize_tokens
+0
+
+VAR prizes_redeemed
 0
 
 VAR inv_harmonica
