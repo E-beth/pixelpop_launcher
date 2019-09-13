@@ -36961,7 +36961,7 @@ DLG FSTSPR_0
   - natrix_cats < 10 ?
     {wvy}one does not pet {clr3}the cat king{clr3} so easily...
     only a master petter may touch the royal fur...{wvy}
-  -  = 10 ?
+  - else ?
     {wvy}i can see you are very experienced...
     you have achieved mastery, and may now pet {clr3}the cat king{clr3}...{wvy} {natrix_cats = natrix_cats + 1}
 }
@@ -36975,14 +36975,14 @@ DLG FSTSPR_2
 {
   - met_swan == 0 ?
     {wvy}hello, noble {say player_nickname}. you may bow before the {clr3}the swan king{clr3}'s throne. {wvy} {met_swan = 1}
-  -  = 1 ?
+  - met_swan == 1 ?
     {wvy}ah! what is that horrid thing on your head?
     only the finest of fashions are tolerated before my throne!{wvy}
     [{clr3}the swan king{clr3} takes your paper bag.] {paper_bag = 0}
   - goblet == 1 ?
     {wvy}is that the goblet of kings in your hand? ugh, {clr3}the cat king{clr3} must stop pushing it off the table!{wvy}
     [{clr3}the cat king{clr3} purrs in his corner.] {goblet = 0}
-  - cv_fish >  = 1 ?
+  - cv_fish >= 1 ?
     {wvy}you've brought fish! yes, i love meeting the peasants.{wvy}
   - mystery_number == 3 ?
     {wvy}{clr3}the swan king{clr3} is feeling generous today! here, a small fortune.{wvy}
@@ -37008,9 +37008,7 @@ DLG FSTSPR_1
   - {wvy}the biggest rat of them all, who decides on policies{wvy}
   - {wvy}you know, me and {clr3}the cat king{clr3} are actually very close. i havent gone cat hunting in years! hehehe{wvy}
   - {wvy}{clr3}the swan king{clr3} sure likes himself huh, thinks he's soooo fancy. see if he likes my knife in his. i mean. he he.{wvy}
-  - {wvy}{clr3}the bat king{clr3}? love that dude. always sleeping, never talks, screeches with the voice of millions of lost nocturnal
-    life forms trying to find their way to the light.
-    it gets me every night man. i haven't slept in 50 years. hehehehehehe{wvy}
+  - {wvy}{clr3}the bat king{clr3}? love that dude. always sleeping, never talks, screeches with the voice of millions of lost nocturnal{br}life forms trying to find their way to the light.{br}it gets me every night man. i haven't slept in 50 years. hehehehehehe{wvy}
   - {wvy}hehehe. good talk, kid.{wvy}
 }
 """
