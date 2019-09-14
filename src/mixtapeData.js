@@ -23,7 +23,7 @@ var mixtape_games = solo ? {
 		colors: ['#000000', '#FFFFFF'],
 	},
 	fever: {
-		title: "Fever",
+		title: "The Fever",
 		author: "A Yolland, @AYolland",
 		src: "games/fever.html",
 		blurb: "I wanted to make this game because it was a story I could tell primarily with color, and because it is an issue close to my heart. If you want to know more about coral bleaching, try globalcoralbleaching.org",
