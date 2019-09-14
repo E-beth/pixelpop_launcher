@@ -147,53 +147,51 @@ The maze wraps round at the edges and you start with 2 Bits, the currency of the
 Organized by @Ducklingsmith
 Rooms:
 <ul>
-<li>David Mowatt by The Bizaar</li>
-<li>Em Lindqvist by Da mf slime z0ne</li>
-<li>Sarah Gould by The Breezy Tree</li>
-<li>onion by terrible job at making a room</li>
-<li>Linda Clark by tbd</li>
-<li>AYolland by Coco's Snake Pit</li>
-<li>natrix by The Cat Café</li>
-<li>Noah S. Brown by Emporiume ofe Forbiddene Itemes</li>
-<li>HexaBlu by Super Bitsy 3D World</li>
-<li>brandon by tbd</li>
-<li>wjhollyart by The Minotaur King</li>
-<li>jodediah🐝holems by Rotating 3D Skull Zone</li>
-<li>Ripple by MinDun (The MiniDungeon)</li>
-<li>dreamingamaris by the mysterious mooonlit garden</li>
-<li>Sergio Cornaga by Frozen Floor</li>
-<li>Celeste Clark by Invisible Maze</li>
-<li>Sean S. LeBlanc by Regents' Rise</li>
-<li>Ian Martin by City Area E</li>
-<li>Ardent Eliot Reinhard by balcony scene</li>
-<li>cammySashimi by River Crossing</li>
-<li>Casino by Star Lounge</li>
-<li>Grim (G.C. Baccaris) by Fine Dining</li>
-<li>mbtzl by tbd</li>
-<li>Whirlybird  by Onion Park</li>
-<li>Dan Lance by hall with bridge</li>
-<li>enui by Have a cuppa</li>
-<li>Emery Patterson by archive room</li>
-<li>exzentia by skel</li>
-<li>Freya C by tbc</li>
-<li>mark wonnacott by room 0</li>
-<li>Bar by Feast of Kings</li>
-<li>dumplingsquid by The Shrieking Void</li>
-<li>caeth by grumpy walls</li>
-<li>nilson carroll by goth night</li>
-<li>TinyMinuet by EGGBABE</li>
-<li>AshG by repulsive magnets room</li>
-<li>Becklespinax by ai ai the spacelord is trapped</li>
-<li>rumpel by rip slug</li>
-<li>Marty Kovach by Cave of the Pizzaria</li>
-<li>Rose by koBOLD  Coffee</li>
-<li>municipal rung allowance by insonoro/turba</li>
-<li>Ebeth by the witches hut</li>
-<li>tom by worm room</li>
-<li>lumpen by portopotties v1.1</li>
-<li>sylvie by Kittey Paradise</li>
-<li>Emma D. by Crab Mafia</li>
-<li>adenator by Deep Temple</li>
+<li>The Bizaar by David Mowatt</li>
+<li>mf slime z0ne by Da Em Lindqvist</li>
+<li>The Breezy Tree by Sarah Gould</li>
+<li>terrible job at making a room by onion</li>
+<li>Coco's Snake Pit by AYolland</li>
+<li>The Cat Café by natrix</li>
+<li>Emporiume ofe Forbiddene Itemes by Noah S. Brown</li>
+<li>Super Bitsy 3D World by HexaBlu</li>
+<li>tbd by brandon</li>
+<li>The Minotaur King by wjhollyart</li>
+<li>Rotating 3D Skull Zone by jodediah🐝holems</li>
+<li>MinDun (The MiniDungeon) by Ripple</li>
+<li>the mysterious mooonlit garden by dreamingamaris</li>
+<li>Frozen Floor by Sergio Cornaga</li>
+<li>Invisible Maze by Celeste Clark</li>
+<li>Regents' Rise by Sean S. LeBlanc</li>
+<li>City Area E by Ian Martin</li>
+<li>balcony scene by Ardent Eliot Reinhard</li>
+<li>River Crossing by cammySashimi</li>
+<li>Star Lounge by Casino</li>
+<li>Fine Dining by Grim (G.C. Baccaris)</li>
+<li>Onion Park by Whirlybird</li>
+<li>hall with bridge by Dan Lance</li>
+<li>Have a cuppa by enui</li>
+<li>archive room by Emery Patterson</li>
+<li>skel by exzentia</li>
+<li>tbc by Freya C</li>
+<li>room 0 by mark wonnacott</li>
+<li>Feast of Kings by Bar</li>
+<li>The Shrieking Void by dumplingsquid</li>
+<li>grumpy walls by caeth</li>
+<li>goth night by nilson carroll</li>
+<li>EGGBABE by TinyMinuet</li>
+<li>repulsive magnets room by AshG</li>
+<li>ai ai the spacelord is trapped by Becklespinax</li>
+<li>rip slug by rumpel</li>
+<li>Cave of the Pizzaria by Marty Kovach</li>
+<li>koBOLD Coffee by Rose</li>
+<li>insonoro/turba by municipal rung allowance</li>
+<li>the witches hut by Ebeth</li>
+<li>worm room by tom</li>
+<li>portopotties v1.1 by lumpen</li>
+<li>Kittey Paradise by sylvie</li>
+<li>Crab Mafia by Emma D.</li>
+<li>Deep Temple by adenator</li>
 </ul>`,
 		colors: ['#DEE3D6', '#345383'],
 	},
