@@ -21,7 +21,7 @@
 <title>My Bitsy Game By Me</title>
 
 <script type="bitsyGameData" id="exportedGameData">
-it was an hour past midnight when i was woken up by a phone call..{br}{br}{clr1}{shk}RING RING RING{shk}{br}{br}"-there's been a murder at the Manster Mansion!!{br}{shk}get your ass down there!{shk}"{clr1}{br} {br}sighing i got out of bed and a few minutes later i was grabbing my coat and gun and walking through the door{br}at least my car was back from the garage{br}three bullets was "nothing much, bud" in my line of work{br}my name is neo{br} {br}and i have got some of the worst luck in the world{br}maybe i should have chosen a different job....
+it was an hour past midnight when i was woken up by a phone call..{br}{br}{stokertalk}{shk}RING RING RING{shk}{br}{br}"-there's been a murder at the Manster Mansion!!{br}{shk}get your ass down there!{shk}"{stokertalk}{br} {br}sighing i got out of bed and a few minutes later i was grabbing my coat and gun and walking through the door{br}at least my car was back from the garage{br}three bullets was "nothing much, bud" in my line of work{br}my name is neo{br} {br}and i have got some of the worst luck in the world{br}maybe i should have chosen a different job....
 
 # BITSY VERSION 5.3
 
@@ -9211,8 +9211,8 @@ DLG ITM_7
 DLG ITM_8
 """
 it was an hour past midnight when i was woken up by a phone call..{br}
-{br}{clr1}{shk}RING RING RING{shk}{br}
-"-there's been a murder at the Manster Mansion!!{br}{shk}get your ass down there!{shk}"{clr1}{br}
+{br}{stokertalk}{shk}RING RING RING{shk}{br}
+"-there's been a murder at the Manster Mansion!!{br}{shk}get your ass down there!{shk}"{stokertalk}{br}
 {br}sighing i got out of bed and a few minutes later i was grabbing my coat and gun and walking through the door{br}at least my car was back from the garage{br}three bullets was "nothing much, bud" in my line of work{br}my name is neo{br}
 {br}and i have got some of the worst luck in the world{br}maybe i should have chosen a different job....
 """
@@ -9243,48 +9243,48 @@ DLG SPR_2
   - policedude_1 == 5 ?
     i couldn't go through with it...
     
-    {clr1}"so neo, you checked it out?"{clr1}
+    {stokertalk}"so neo, you checked it out?"{stokertalk}
     
     it was not who i was..
     
-    {clr1}"hey, neo?"{clr1}
+    {stokertalk}"hey, neo?"{stokertalk}
     
     i.. had to stick to my morals...
     
-    {clr1}"{wvy}earth to neo!{wvy}"{clr1}
+    {stokertalk}"{wvy}earth to neo!{wvy}"{stokertalk}
     
-    {clr3}"ah.. stoker... hey....."{clr3}
+    {neotalk}"ah.. stoker... hey....."{neotalk}
     
-    {clr1}"did you check it out? your fears resolved?"{clr1}
-    {clr3}"um... how about we talk about it back at the station.."{clr3}
-    {clr1}"alright, dude.."{clr1}
+    {stokertalk}"did you check it out? your fears resolved?"{stokertalk}
+    {neotalk}"um... how about we talk about it back at the station.."{neotalk}
+    {stokertalk}"alright, dude.."{stokertalk}
     
-    {clr3}"sorry.. its just been a lot.."{clr3}
+    {neotalk}"sorry.. its just been a lot.."{neotalk}
     
-    {clr1}"you solved a murder in less than a night, my guy, you gotta be tired"{clr1}
+    {stokertalk}"you solved a murder in less than a night, my guy, you gotta be tired"{stokertalk}
     
-    {clr3}"yeah, i really wanna sleep heh"{clr3}
+    {neotalk}"yeah, i really wanna sleep heh"{neotalk}
     
-    {clr1}"yeah i'll drive!"{clr1}(exit "police,7,6")
+    {stokertalk}"yeah i'll drive!"{stokertalk}(exit "police,7,6")
   - policedude_1 == 4 ?
-    {clr1}"so that criminal is in the car"{clr1}
+    {stokertalk}"so that criminal is in the car"{stokertalk}
     
-    {clr3}"..."{clr3}{climax1 = 1}
+    {neotalk}"..."{neotalk}{climax1 = 1}
     
-    {clr1}"aw come on, dude, you got the guy"{clr1}
-    {clr3}"i dont know..."{clr3}
+    {stokertalk}"aw come on, dude, you got the guy"{stokertalk}
+    {neotalk}"i dont know..."{neotalk}
     
-    {clr1}"its not like you to miss anything"{clr1}
-    {clr3}"something still doesn't feel right.."{clr3}
-    {clr1}"is that ur gut talking?"{clr1}
+    {stokertalk}"its not like you to miss anything"{stokertalk}
+    {neotalk}"something still doesn't feel right.."{neotalk}
+    {stokertalk}"is that ur gut talking?"{stokertalk}
     
-    {clr3}"i guess.."{clr3}
+    {neotalk}"i guess.."{neotalk}
     
     something just didn't seem to fit..
     after hearing jeff's outbursts...
     i felt like i got a valuable clue..
-    {clr3}"i'm going to go back in..
-    i need to go check something.."{clr3}
+    {neotalk}"i'm going to go back in..
+    i need to go check something.."{neotalk}
     the roof...{roof1 = 1}
     
     it might still be there!!
@@ -9327,27 +9327,27 @@ DLG SPR_2
     {clr3}"yeah man... hard same..."{clr3}
   - policedude_1 == 1 ?
     {sequence
-      - {clr1}"detective neo! you sure took your sweet time, my guy"{clr1}
-        {clr3}"buzz off, stoker, unlike you i dont suffer from insomnia...... that much"
+      - {stokertalk}"detective neo! you sure took your sweet time, my guy"{stokertalk}
+        {neotalk}"buzz off, stoker, unlike you i dont suffer from insomnia...... that much"
         
-        {clr3}{clr1}"sure, sure... lol"{clr1}
+        {neotalk}{stokertalk}"sure, sure... lol"{stokertalk}
         
         and this is stoker, a jolly good chap thats a pain in the ass but at least they're reliable.... most of the time.
-        {clr3}"so what's the deal?"{clr3}
+        {neotalk}"so what's the deal?"{neotalk}
         
-        {clr1}"in there? who knows lol they havn't let me in at all"{clr1}
-        {clr3}"huh.."{clr3}
+        {stokertalk}"in there? who knows lol they haven't let me in at all"{stokertalk}
+        {neotalk}"huh.."{neotalk}
         
-        {clr1}"i don't think they'll let me in either, one cop is enough to ruffle their feathers and i'd rather not take my chances"{clr1}
-        {clr3}"so i may as well be walking into a trap"{clr3}
-        {clr1}"it's been nice knowing u kno lol"{clr1}
-      - {clr1}"go on, ha ha, or are you scared? lol"{clr1}
-        {clr3}"any reasonable person would be scared to go in...
+        {stokertalk}"i don't think they'll let me in either, one cop is enough to ruffle their feathers and i'd rather not take my chances"{stokertalk}
+        {neotalk}"so i may as well be walking into a trap"{neotalk}
+        {stokertalk}"it's been nice knowing u kno lol"{stokertalk}
+      - {stokertalk}"go on, ha ha, or are you scared? lol"{stokertalk}
+        {neotalk}"any reasonable person would be scared to go in...
         so of course...
         
-        im scared {shk}shitless{shk}"{clr3}
+        im scared {shk}shitless{shk}"{neotalk}
         
-        {clr1}"lmao my guy"{clr1}
+        {stokertalk}"lmao my guy"{stokertalk}
     }
   - else ?
 
@@ -9359,45 +9359,45 @@ DLG SPR_3
 {
   - master_1 == 7 ?
     {sequence
-      - {clr1}"thank you for catching my mother's murderer!"{clr1}
-        {clr3}"well its not exactly confirmed.."{clr3}{climax1 = 1}
-        {clr1}"nonsense! you are {wvy}my hero{wvy}"{clr1}
+      - {krystalk}"thank you for catching my mother's murderer!"{krystalk}
+        {neotalk}"well its not exactly confirmed.."{neotalk}{climax1 = 1}
+        {krystalk}"nonsense! you are {wvy}my hero{wvy}"{krystalk}
         
         i felt my cheeks heat up..
         
-        {clr3}"y-yeah.. guess i'm going to go take them up to the station now.."{clr3}
+        {neotalk}"y-yeah.. guess i'm going to go take them up to the station now.."{neotalk}
         
-        {clr1}"of course, you must go"{clr1}
+        {krystalk}"of course, you must go"{krystalk}
         
-        {clr3}"..."{clr3}
+        {neotalk}"..."{neotalk}
         
-        {clr1}"you can come back anytime....
-        when im home.."{clr1}
-        {clr3}"..yeah i.. um.. wouldn't trust your family..."{clr3}
+        {krystalk}"you can come back anytime....
+        when im home.."{krystalk}
+        {neotalk}"..yeah i.. um.. wouldn't trust your family..."{neotalk}
         they laughed as thought i said something truly funny..
-        {clr1}"i dont think they'll do anything to you unless i say something"{clr1}
+        {krystalk}"i dont think they'll do anything to you unless i say something"{krystalk}
         
-        {clr3}"...goodbye now"{clr3}
+        {neotalk}"...goodbye now"{neotalk}
         
-        {clr1}"bye bye, {wvy}my little detective!{wvy}"{clr1}
+        {krystalk}"bye bye, {wvy}my little detective!{wvy}"{krystalk}
         
         with a heavy heart, i left...
-      - {clr1}"bye bye, {wvy}my little detective!{wvy}"{clr1}
+      - {krystalk}"bye bye, {wvy}my little detective!{wvy}"{krystalk}
         
         with a heavy heart, i left...
     }
   - master_1 == 6 ?
     {
       - bleed1 == 1 ?
-        {clr1}"you're going to arrest them?"{clr1}
+        {krystalk}"you're going to arrest them?"{krystalk}
         
-        {clr3}"yes, in a moment"{clr3}
+        {neotalk}"yes, in a moment"{neotalk}
       - else ?
-        {clr1}"oh satan, you're {clr2}bleeding{clr2} everywhere!"{clr1}{office_door = 1}
-        {clr3}"..its really not that bad..."{clr3}
+        {krystalk}"oh satan, you're {clr2}bleeding{clr2} everywhere!"{krystalk}{office_door = 1}
+        {neotalk}"..its really not that bad..."{neotalk}
         
-        {clr1}"come on, theres a medikit in the office..
-        its just to the left.."{clr1}
+        {krystalk}"come on, theres a medikit in the office..
+        its just to the left.."{krystalk}
         
         they really seem so worried...
         
@@ -9406,31 +9406,31 @@ DLG SPR_3
         but it does feel kind of nice..........
     }
   - master_1 == 5 ?
-    {clr3}"well now i have talked to everyone..."{clr3}
-    {clr1}"do you have any ideas, {wvy}little detective?{wvy}"{clr1}{cousin_1 = 3}
-    {clr3}"...maybe"{clr3}
+    {neotalk}"well now i have talked to everyone..."{neotalk}
+    {krystalk}"do you have any ideas, {wvy}little detective?{wvy}"{krystalk}{cousin_1 = 3}
+    {neotalk}"...maybe"{neotalk}
     
-    {clr1}"but?"{clr1}
+    {krystalk}"but?"{krystalk}
     
-    {clr3}"i need to talk to jeff...."{clr3}
+    {neotalk}"i need to talk to jeff...."{neotalk}
     
-    {clr1}"they do seem done with their phone call"{clr1}
-    {clr3}"y..eah...."{clr3}
+    {krystalk}"they do seem done with their phone call"{krystalk}
+    {neotalk}"y..eah...."{neotalk}
     
-    {clr1}"{wvy}let's go{wvy}"{clr1}
+    {krystalk}"{wvy}let's go{wvy}"{krystalk}
   - master_1 == 4 ?
-    {clr3}"well that seems to be everyone.."{clr3}
-    {clr1}"you havn't talked to mx. monny, {wvy}little detective{wvy}"{clr1}
-    {clr3}"oh.."{clr3}
+    {neotalk}"well that seems to be everyone.."{neotalk}
+    {krystalk}"you havn't talked to mx. monny, {wvy}little detective{wvy}"{krystalk}
+    {neotalk}"oh.."{neotalk}
     
-    {clr1}"they are probably in the kitchen, that's just to the right of this room"{clr1}
+    {krystalk}"they are probably in the kitchen, that's just to the right of this room"{krystalk}
     
-    {clr3}"i see... let's go then"{clr3}
+    {neotalk}"i see... let's go then"{neotalk}
   - master_1 == 3 ?
-    {clr1}"don't worry i'll help you talk to everyone"{clr1}
-    {clr3}"thanks.."{clr3}
+    {krystalk}"don't worry i'll help you talk to everyone"{krystalk}
+    {neotalk}"thanks.."{neotalk}
     
-    {clr1}"you have nothing to fear when im with you"{clr1}
+    {krystalk}"you have nothing to fear when im with you"{krystalk}
     ..i think i have a lot to fear, thank you very much, handsome {shk}killer{shk}
   - master_1 == 1 ?
     {sequence
@@ -9444,33 +9444,33 @@ DLG SPR_3
         and yet........ 
         damn they were {wvy}{rbw}Hot{rbw}{wvy}
         
-        {clr1}"-a gun shot and i rushed out to the roof and found.. are you listening to me, {wvy}detective{wvy}?"{clr1}
+        {krystalk}"-a gun shot and i rushed out to the roof and found.. are you listening to me, {wvy}detective{wvy}?"{krystalk}
         
-        {clr3}"uh.."{clr3}
+        {neotalk}"uh.."{neotalk}
         
         their eyes were a deep sort of red, like fancy wine or maybe fresh blood... 
         and those cheekbones... 
-        {clr1}"-onestly, human, your species really is quite stupid-"{clr1}
+        {krystalk}"-onestly, human, your species really is quite stupid-"{krystalk}
         they were truly mesmerizing, like something out of this world...
         
-        {clr1}"{shk}detective neo glaze{shk}"{clr1}
+        {krystalk}"{shk}detective neo glaze{shk}"{krystalk}
         
-        {clr3}"yes.. uh.. you heard a gun shot on the roof and rushed there.."{clr3}
-        {clr1}"so you were paying attention, {wvy}detective{wvy}"{clr1}
-        {clr3}"-of course"{clr3}
+        {neotalk}"yes.. uh.. you heard a gun shot on the roof and rushed there.."{neotalk}
+        {krystalk}"so you were paying attention, {wvy}detective{wvy}"{krystalk}
+        {neotalk}"-of course"{neotalk}
         
-        {clr1}"so?"{clr1}
+        {krystalk}"so?"{krystalk}
         
-        {clr3}"um i need to see the crime scene"{clr3}
-        {clr1}"of course, the stairs to the roof is straight ahead"{clr1}
+        {neotalk}"um i need to see the crime scene"{neotalk}
+        {krystalk}"of course, the stairs to the roof is straight ahead"{krystalk}
         .....well one thing was clear...
         
         i was very truly..
         
         {shk}screwed{shk}...
-      - {clr1}"the roof, detective"{clr1}
+      - {krystalk}"the roof, detective"{krystalk}
         
-        {clr3}"y-yes of course! i'm going!"{clr3}
+        {neotalk}"y-yes of course! i'm going!"{neotalk}
     }
   - else ?
 
@@ -9500,19 +9500,19 @@ DLG ITM_a
     some of the cruelest people in the world gathered here to commit all sorts of sins and crimes..
     frankly i was amazed to even be allowed to come this close.. 
     they had a rather nasty habit of killing any cop just barely glancing in the direction of their business..
-    {clr1}"welcome, sir, the young master has been expecting you"{clr1}
+    {thirdpersontalk}"welcome, sir, the young master has been expecting you"{thirdpersontalk}
     the butler seemed to appear out of thin air.. 
     no really they did...{policedude_1 = 2}
     
-    {clr3}"oh um..."{clr3}
+    {neotalk}"oh um..."{neotalk}
     
     my tongue felt tied with a sturdy sailor knot.. 
     not something easily resolved.. 
     
     at least they didn't wait for me to speak
-    {clr1}"right in front of you, sir"{clr1}{after_knock1 = 0}
+    {thirdpersontalk}"right in front of you, sir"{thirdpersontalk}{after_knock1 = 0}
     
-    {clr3}"t-thank you"{clr3}
+    {neotalk}"t-thank you"{neotalk}
   - else ?
 
 }
@@ -9522,11 +9522,11 @@ DLG SPR_6
 """
 {
   - butler_1 == 3 ?
-    {clr1}"so you arrested jeff..."{clr1}
+    {thirdpersontalk}"so you arrested jeff..."{thirdpersontalk}
     
-    {clr3}"..."{clr3}
+    {neotalk}"..."{neotalk}
     
-    {clr1}"well not the worst outcome"{clr1}
+    {thirdpersontalk}"well not the worst outcome"{thirdpersontalk}
     
     ..harsh
   - butler_1 == 2 ?
@@ -9535,59 +9535,59 @@ DLG SPR_6
         
         another enigma...
         
-        {clr3}"hello, i'd like to speak to you about the murder of fransiska manster"{clr3}
+        {neotalk}"hello, i'd like to speak to you about the murder of fransiska manster"{neotalk}
         
         the butler didn't look at me, they glanced at krys and getting confirmation from them, they seem to have decided to speak to me thankfully
         
-        {clr1}"what would you like to know?"{clr1}
+        {thirdpersontalk}"what would you like to know?"{thirdpersontalk}
         
-        {clr3}"well have you seen fransiska manster before they were killed? were they acting in any strange way?"{clr3}
-        {clr1}"no, they were acting as usual and were mostly here until they went upstair"{clr1}
+        {neotalk}"well have you seen fransiska manster before they were killed? were they acting in any strange way?"{neotalk}
+        {thirdpersontalk}"no, they were acting as usual and were mostly here until they went upstairs"{thirdpersontalk}
         
-        {clr3}"did anyone go to the roof in that time?"{clr3}
-        {clr1}"jeff did, fransiska wanted to discuss something with them"{clr1}
-        {clr3}"oh.."{clr3}
+        {neotalk}"did anyone go to the roof in that time?"{neotalk}
+        {thirdpersontalk}"jeff did, fransiska wanted to discuss something with them"{thirdpersontalk}
+        {neotalk}"oh.."{neotalk}
         
-        {clr1}"anything else you wish to know?
-        i haven't got the whole day, you know"{clr1}
+        {thirdpersontalk}"anything else you wish to know?
+        i haven't got the whole day, you know"{thirdpersontalk}
         
-        {clr3}"ah um.."{clr3}
+        {neotalk}"ah um.."{neotalk}
         
         they raised an eyebrow..
         
-        {clr1}"did anyone else go to the roof?"{clr1}
-        {clr3}"well, i did, {wvy}little detective{wvy}, i already told you that i smoked up there"{clr3}
+        {neotalk}"did anyone else go to the roof?"{neotalk}
+        {krystalk}"well, i did, {wvy}little detective{wvy}, i already told you that i smoked up there"{krystalk}
         
-        {clr1}"ah yeah.."{clr1}
+        {neotalk}"ah yeah.."{neotalk}
         
         i caught the subtle look the butler gave krys but i wasn't sure what it meant..
         
-        {clr3}"was it krys who discovered the body?"{clr3}
-        {clr1}"no, it was jeff"{clr1}
+        {neotalk}"was it krys who discovered the body?"{neotalk}
+        {thirdpersontalk}"no, it was jeff"{thirdpersontalk}
         
-        {clr3}"jeff was the last person to see fransiska alive? krys smoked before?"{clr3}
+        {neotalk}"jeff was the last person to see fransiska alive? krys smoked before?"{neotalk}
         
-        {clr1}"yes"{clr1}
+        {thirdpersontalk}"yes"{thirdpersontalk}
         
         mmmm.....
         
-        {clr3}"but was-"{clr3}
+        {neotalk}"but was-"{neotalk}
         
-        {clr1}"sorry, detective sir, but i've got no more time to dilly dally"{clr1}
-        {clr3}"ah.."{clr3}
+        {thirdpersontalk}"sorry, detective sir, but i've got no more time to dilly dally"{thirdpersontalk}
+        {neotalk}"ah.."{neotalk}
         
         i turned to krys but they seemed apologetic...
         well i did get some interesting information....
-      - {clr1}"sorry i cannot stay and talk"{clr1}
+      - {thirdpersontalk}"sorry i cannot stay and talk"{thirdpersontalk}
         
-        {clr3}"right.. sorry to bother you.."{clr3}
+        {neotalk}"right.. sorry to bother you.."{neotalk}
         
         ugh i still got many questions..
         
         but they obviously don't want to talk more...
     }
   - butler_1 == 1 ?
-    {clr1}"do not keep the young master waiting, sir"{clr1}
+    {thirdpersontalk}"do not keep the young master waiting, sir"{thirdpersontalk}
     ..gulp.... of course not....
   - else ?
 
@@ -9598,52 +9598,53 @@ DLG SPR_7
 """
 {
   - lili_1 == 3 ?
-    {clr1}"i guess i did suspect jeff.."{clr1}
+    {thirdpersontalk}"i guess i did suspect jeff.."{thirdpersontalk}
     
     they looked sad for a moment..
     
-    {clr1}"but i did hope it wasn't.."{clr1}
+    {thirdpersontalk}"but i did hope it wasn't.."{thirdpersontalk}
     
     they said it so quietly i don't think i was meant to hear it..
   - lili_1 == 2 ?
     {sequence
       - coming closer to lili manster once more, i clear my throat as they seem otherwise occupied on their phone...{talk1 = talk1 + 1}
-        {clr3}"hello, i'd like to speak to you about the murder..."{clr3}
-        {clr1}"well i'd like it if you ripped ur tongue out and never talked to me again"{clr1}
+        {neotalk}"hello, i'd like to speak to you about the murder..."{neotalk}
+        {thirdpersontalk}"well i'd like it if you ripped ur tongue out and never talked to me again"{thirdpersontalk}
         
         their eyes never left their phone....
-        {clr1}"well now lili, that's not very nice"
-        "i dont care, im busy!"
+        {krystalk}"well now lili, that's not very nice"{krystalk}
+        {thirdpersontalk}"i dont care, im busy!"{thirdpersontalk}
         
-        "not too busy to talk to the detective"{clr1}
+        {krystalk}"not too busy to talk to the detective"{krystalk}
         it wasnt a suggestion....
         
         their eyes snapped to krys...
         
-        {clr1}"i think i am quite busy"{clr1}
+        {thirdpersontalk}"i think i am quite busy"{thirdpersontalk}
         
         they rolled their eyes
         
-        {clr3}"h-hey.. you shouldn't talk to the new boss like that!"{clr3}
-        {clr1}"new boss? who told you that"{clr1}
+        {neotalk}"h-hey.. you shouldn't talk to the new boss like that!"{neotalk}
+        {thirdpersontalk}"new boss? who told you that"{thirdpersontalk}
         
         lili laughed...
         
         then they gave me such a smug look
-        {clr1}"don't even listen to this fool, everyone knows cousin jeff is the new boss"{clr1}
+        {thirdpersontalk}"don't even listen to this fool, everyone knows cousin jeff is the new boss"{thirdpersontalk}
         
-        {clr3}"..."{clr3}
+        {neotalk}"..."{neotalk}
         
-        {clr1}"their own parent didn't trust them with inheriting the business"{clr1}
+        {thirdpersontalk}"their own parent didn't trust them with inheriting the business"{thirdpersontalk}
         
         they turned to krys and sneered...
-        {clr3}"there's no reason to be so rude!"{clr3}
-        krys seemed surprised by my out burst but lili seemed amused...
-        {clr1}"aw is this little human protecting ur honor? 
-        {wvy}how adorable!{wvy}"{clr1}
-        
+        {neotalk}"there's no reason to be so rude!"{neotalk}
+        krys seemed surprised by my outburst but lili seemed amused...
+		
+        {thirdpersontalk}"aw is this little human protecting ur honor? 
+        {wvy}how adorable!{wvy}"{thirdpersontalk}
+		
         krys rolled their eyes and i realized this was the end of this conversation....
-      - {clr1}{wvy}"ha ha kryssy baby needs their little human to butt in for them! ha ha ha!!"{wvy}{clr1}
+      - {thirdpersontalk}{wvy}"ha ha kryssy baby needs their little human to butt in for them! ha ha ha!!"{wvy}{thirdpersontalk}
         
         ugh.. ignoring it will make it go away.....
         hopefully....
@@ -9652,7 +9653,7 @@ DLG SPR_7
     lili manster... a ruthless hitman known for their especially brutal methods...
     
     its quite chilling just being in their presence...
-    {clr1}"hey dude, move along, i'm busy!"{clr1}
+    {thirdpersontalk}"hey dude, move along, i'm busy!"{thirdpersontalk}
     ..they do seem to be glued to their phone.....
     taking snapchat selfies.....
     well no judgement there, the filters are very fun....
@@ -9667,57 +9668,57 @@ DLG SPR_8
 """
 {
   - master_1 == 8 ?
-    {clr1}"oh don't look so glum, my dear"{clr1}
+    {krystalk}"oh don't look so glum, my dear"{krystalk}
     
-    {clr3}"you killed your own parent.."{clr3}{policedude_1 = 5}
+    {neotalk}"you killed your own parent.."{neotalk}{policedude_1 = 5}
     
-    {clr1}"well frankly it was a gamble"{clr1}
+    {krystalk}"well frankly it was a gamble"{krystalk}
     
-    {clr3}"..."{clr3}
+    {neotalk}"..."{neotalk}
     
-    {clr1}"the enchantment would shoot the who ever was the first on the roof.. whether it was my own mother or jeff.. i had no way of knowing.."{clr1}
+    {krystalk}"the enchantment would shoot the who ever was the first on the roof.. whether it was my own mother or jeff.. i had no way of knowing.."{krystalk}
     
-    {clr3}"{shk}you killed your own parent{shk}"{clr3}
+    {neotalk}"{shk}you killed your own parent{shk}"{neotalk}
     
-    {clr1}"yes, that was unlucky"{clr1}
+    {krystalk}"yes, that was unlucky"{krystalk}
     
-    {clr3}"y-you invited me here just for this.."{clr3}
-    {clr1}"well i had to have someone get jeff convicted"{clr1}
-    {clr3}"they are just arrest of susp-"{clr3}
+    {neotalk}"y-you invited me here just for this.."{neotalk}
+    {krystalk}"well i had to have someone get jeff convicted"{krystalk}
+    {neotalk}"they are just arrest of susp-"{neotalk}
     
-    {clr1}"semantics, my dear, i'm sure you'll be taken off the case anyway and then with my evidence jeff will be stuck in jail until an {wvy}unlucky accident{wvy} befalls them"{clr1}
-    {clr3}"you used me!!"{clr3}
+    {krystalk}"semantics, my dear, i'm sure you'll be taken off the case anyway and then with my evidence jeff will be stuck in jail until an {wvy}unlucky accident{wvy} befalls them"{krystalk}
+    {neotalk}"you used me!!"{neotalk}
     
-    {clr1}"just a little, {wvy}my hero{wvy}"{clr1}
+    {krystalk}"just a little, {wvy}my hero{wvy}"{krystalk}
     
-    {clr3}"u mean your fool..."{clr3}
+    {neotalk}"u mean your fool..."{neotalk}
     
-    {clr1}"a bit harsh on yourself, you are, my dear"{clr1}
-    {clr3}"i'm{shk} not YOUR DEAR!{shk}"{clr3}
+    {krystalk}"a bit harsh on yourself, you are, my dear"{krystalk}
+    {neotalk}"i'm{shk} not YOUR DEAR!{shk}"{neotalk}
     
-    {clr1}"mm.."{clr1}
+    {krystalk}"mm.."{krystalk}
     
     they actually looked saddened by that..
     like my outburst surprised them..
-    {clr1}"oh neo.. why don't you join me?"{clr1}
-    {clr3}"w-what..?"{clr3}{roof1 = 0}
+    {krystalk}"oh neo.. why don't you join me?"{krystalk}
+    {neotalk}"w-what..?"{neotalk}{roof1 = 0}
     
-    {clr1}"there's something about you... you're so weak.. 
-    so human... {wvy}so mortal{wvy}"{clr1}
+    {krystalk}"there's something about you... you're so weak.. 
+    so human... {wvy}so mortal{wvy}"{krystalk}
     
-    {clr3}"..."{clr3}{master_1 = 9}
+    {neotalk}"..."{neotalk}{master_1 = 9}
     
-    {clr1}"and yet you protected me..
-    oh how i want you.."{clr1}
-    {clr3}"y-you're a monster!!!"{clr3}
+    {krystalk}"and yet you protected me..
+    oh how i want you.."{krystalk}
+    {neotalk}"y-you're a monster!!!"{neotalk}
     
-    {clr1}"well you are right, my family comes from a long line of monsters, we even know magic.. i could teach you!"{clr1}
-    {clr3}"..."{clr3}
+    {krystalk}"well you are right, my family comes from a long line of monsters, we even know magic.. i could teach you!"{krystalk}
+    {neotalk}"..."{neotalk}
     
-    {clr1}"even if you try to go 'correct' your mistake, it won't change anything! jeff crossed my path and now they are doomed"{clr1}
+    {krystalk}"even if you try to go 'correct' your mistake, it won't change anything! jeff crossed my path and now they are doomed"{krystalk}
     ....
     
-    {clr1}"you're either with me or you're not, it's your choice but choose wisely.."{clr1}
+    {krystalk}"you're either with me or you're not, it's your choice but choose wisely.."{krystalk}
     
     their {clr2}red{clr2} eyes shone with conviction
     i...
@@ -9736,26 +9737,26 @@ DLG SPR_8
     test my fate with.... krys..
     
     a {shk}literal monster{shk} in every sense of the word....
-    {clr1}"think about it.. but not too long, goodbye, {wvy}my dear neo{wvy}"{clr1}(exit "outside,8,14")
+    {krystalk}"think about it.. but not too long, goodbye, {wvy}my dear neo{wvy}"{krystalk}(exit "outside,8,14")
   - master_1 == 7 ?
-    {clr1}"bye bye, {wvy}my little detective!{wvy}"{clr1}
+    {krystalk}"bye bye, {wvy}my little detective!{wvy}"{krystalk}
     
     and with a heavy heart, i left...
   - master_1 == 3 ?
     {sequence
-      - {clr1}"have you found anything?"{clr1}{gun1 = 0}
+      - {krystalk}"have you found anything?"{krystalk}{gun1 = 0}
         
         they looked so serious...{johny_1 = 2}
         
         of course.....{monny_1 = 2}
         
         but why hadn't they conducted any investigation themselves...
-        {clr3}"y-yes... but.. i was wondering..?"{clr3}{policedude_1 = 3}
-        {clr1}"why i havn't checked it out myself?"{clr1}
-        {clr3}"yeah..."{clr3}{cousin_1 = 2}
+        {neotalk}"y-yes... but.. i was wondering..?"{neotalk}{policedude_1 = 3}
+        {krystalk}"why i havn't checked it out myself?"{krystalk}
+        {neotalk}"yeah..."{neotalk}{cousin_1 = 2}
         
-        {clr1}"i'm not an investigator, detective..{lili_1 = 2}
-        i'm more of glorified cleaner"{clr1}
+        {krystalk}"i'm not an investigator, detective..{lili_1 = 2}
+        i'm more of glorified cleaner"{krystalk}
         
         i... hadn't known that..{butler_1 = 2}
         
@@ -9763,23 +9764,23 @@ DLG SPR_8
         no one truly knew what krystaphel manster did..
         they were a dark horse..
         
-        {clr1}"i feared trampling all over the evidence..
-        i do {shk}not{shk} trust anyone in my family..."{clr1}
-        {clr3}"i see.."{clr3}
+        {krystalk}"i feared trampling all over the evidence..
+        i do {shk}not{shk} trust anyone in my family..."{krystalk}
+        {neotalk}"i see.."{neotalk}
         
-        {clr1}"..."{clr1}
+        {krystalk}"..."{krystalk}
         
-        {clr3}"your parent was killed by a single gunshot into the chest as far as i can see...
+        {neotalk}"your parent was killed by a single gunshot into the chest as far as i can see...
         
         but you could already see that too...
         the gun looks clean..
         
-        we could check it for fingerprints but doubtful..."{clr3}
-        {clr1}"indeed, everyone wears gloves"{clr1}
+        we could check it for fingerprints but doubtful..."{neotalk}
+        {krystalk}"indeed, everyone wears gloves"{krystalk}
         
-        {clr3}"..."{clr3}
+        {neotalk}"..."{neotalk}
         
-        {clr1}"..."{clr1}
+        {krystalk}"..."{krystalk}
         
         i couldn't get a read on them...
         
@@ -9794,24 +9795,24 @@ DLG SPR_8
         anything to get a peak at the real person behind...
         .....
         
-        {clr3}"do you smoke?"{clr3}
+        {neotalk}"do you smoke?"{neotalk}
         
-        {clr1}"i beg your pardon?"{clr1}
+        {krystalk}"i beg your pardon?"{krystalk}
         
-        {clr3}"there's a recent cigarette in the ash tray.."{clr3}
-        {clr1}"oh well yes that was me..
+        {neotalk}"there's a recent cigarette in the ash tray.."{neotalk}
+        {krystalk}"oh well yes that was me..
         
         i think i smoked just before...
         
-        the murder.."{clr1}
+        the murder.."{krystalk}
         
-        {clr3}"..."{clr3}
+        {neotalk}"..."{neotalk}
         
-        {clr1}"oh am i a suspect now?"{clr1}
+        {krystalk}"oh am i a suspect now?"{krystalk}
         
-        {clr3}"everyone is a suspect"{clr3}
+        {neotalk}"everyone is a suspect"{neotalk}
         
-        {clr1}"mmm.."{clr1}
+        {krystalk}"mmm.."{krystalk}
         
         they smiled....
         
@@ -9820,46 +9821,46 @@ DLG SPR_8
         
         i shouldn't have felt so breathless...
         but here i was....
-      - {clr1}"...where to now, {wvy}detective{wvy}?"{clr1}
+      - {krystalk}"...where to now, {wvy}detective{wvy}?"{krystalk}
         
-        {clr3}"uh..."{clr3}
+        {neotalk}"uh..."{neotalk}
         
         their sudden shift of conversation had me disoriented for a moment..
         
-        {clr3}"we should probably talk to everyone"{clr3}
-        {clr1}"everyone is on the first floor
+        {neotalk}"we should probably talk to everyone"{neotalk}
+        {krystalk}"everyone is on the first floor
         
-        you've seen everyone here but mx. monny"{clr1}
-        {clr3}"who?"{clr3}
+        you've seen everyone here but mx. monny"{krystalk}
+        {neotalk}"who?"{neotalk}
         
-        {clr1}"our housekeeper and cook who is most likely in the kitchen at this moment"{clr1}
+        {krystalk}"our housekeeper and cook who is most likely in the kitchen at this moment"{krystalk}
         
-        {clr3}"oh i see..."{clr3}
+        {neotalk}"oh i see..."{neotalk}
         
-        {clr1}"don't worry i will help you get a chance to talk
-        they wouldn't dare ignore you"{clr1}
+        {krystalk}"don't worry i will help you get a chance to talk
+        they wouldn't dare ignore you"{krystalk}
         
-        {clr3}"t-thanks"{clr3}
+        {neotalk}"t-thanks"{neotalk}
         
-        {clr1}"let's go"{clr1}
+        {krystalk}"let's go"{krystalk}
     }
   - master_1 == 2 ?
     {sequence
-      - {clr1}"yes, someone killed my parent"{clr1}
+      - {krystalk}"yes, someone killed my parent"{krystalk}
         
-        {clr3}"i-i didnt..."{clr3}
+        {neotalk}"i-i didnt..."{neotalk}
         
-        {clr1}"no one outside the Family knows and it better {shk}stay{shk} that way until this is sorted out"{clr1}
+        {krystalk}"no one outside the Family knows and it better {shk}stay{shk} that way until this is sorted out"{krystalk}
         
-        {clr3}"i..... i.. understand"{clr3}
+        {neotalk}"i..... i.. understand"{neotalk}
         
-        {clr1}"good, now do your little detective thing
-        and {shk}dont{shk} let me down"{clr1}
-      - {clr1}"have you found anything yet?"{clr1}
+        {krystalk}"good, now do your little detective thing
+        and {shk}dont{shk} let me down"{krystalk}
+      - {krystalk}"have you found anything yet?"{krystalk}
         
-        {clr3}"uh.. no..."{clr3}
+        {neotalk}"uh.. no..."{neotalk}
         
-        {clr1}"then go {shk}look{shk}"{clr1}
+        {krystalk}"then go {shk}look{shk}"{krystalk}
     }
   - else ?
 
@@ -9870,11 +9871,11 @@ DLG SPR_9
 """
 {
   - johny_1 == 3 ?
-    {clr1}"jeff, huh.."{clr1}
+    {thirdpersontalk}"jeff, huh.."{thirdpersontalk}
     
-    {clr3}"nothing is for sure yet but-"{clr3}
+    {neotalk}"nothing is for sure yet but-"{neotalk}
     
-    {clr1}"honestly jeff doesnt even have the ruthlessness to be the boss.. i dont think fransiska was gonna make him the boss anyway.... but really who knows.. they were a savage binch..."{clr1}
+    {thirdpersontalk}"honestly jeff doesnt even have the ruthlessness to be the boss.. i dont think fransiska was gonna make him the boss anyway.... but really who knows.. they were a savage binch..."{thirdpersontalk}
     
     they giggled..
     
@@ -9884,31 +9885,31 @@ DLG SPR_9
       - johny manster...{talk1 = talk1 + 1}
         
         i took a deep breath and yelled {shk}YOLO{shk} in my mind..
-        {clr3}"hello, i'd like to ask some questions about the murder of frans-"{clr3}
+        {neotalk}"hello, i'd like to ask some questions about the murder of frans-"{neotalk}
         
-        {clr1}"mm of course you do"{clr1}
+        {thirdpersontalk}"mm of course you do"{thirdpersontalk}
         
-        {clr3}"um.."{clr3}
+        {neotalk}"um.."{neotalk}
         
-        {clr1}"my time is money, $500 per question seems reasonable, mm?"{clr1}
-        {clr3}"i.. um.. dont.."{clr3}
+        {thirdpersontalk}"my time is money, $500 per question seems reasonable, mm?"{thirdpersontalk}
+        {neotalk}"i.. um.. dont.."{neotalk}
         
-        {clr1}"knock it off, johny"{clr1}
+        {krystalk}"knock it off, johny"{krystalk}
         
         johny giggled..
         
-        {clr1}"aw but look how cute they look,
-        what even is their yearly income?"{clr1}
+        {thirdpersontalk}"aw but look how cute they look,
+        what even is their yearly income?"{thirdpersontalk}
         
         they looked like they took a moment to actually think about it before they burst out laughing...
         ..that really didnt make me feel good..
-        {clr3}"yeah yeah im poor"{clr3}
+        {neotalk}"yeah yeah im poor"{neotalk}
         
         i grumbled..
         
-        {clr1}"honestly, johny behave"{clr1}
+        {krystalk}"honestly, johny behave"{krystalk}
         
-        {clr1}"mmm.. are you even sure you want me to?"{clr1}
+        {thirdpersontalk}"mmm.. are you even sure you want me to?"{thirdpersontalk}
         they gave a little sly smile,
         
         and then..
@@ -9918,16 +9919,16 @@ DLG SPR_9
         i turned to krys and just barely caught them glaring back..
         did johny know something??
         
-        {clr1}"i'll tell you if you give me a {wvy}little kiss{wvy}"{clr1}
+        {thirdpersontalk}"i'll tell you if you give me a {wvy}little kiss{wvy}"{thirdpersontalk}
         before i could open my mouth (to explain why i couldn't do that),
         krys took my arm and dragged me away...
         all i could hear was johny giggling..
       - we were far away from johny by now..
         krys seemed to be lost in their own head...
-        {clr1}"someone needs to learn to keep their claws to themselves"{clr1}
-        {clr3}"hmm?"{clr3}
+        {krystalk}"someone needs to learn to keep their claws to themselves"{krystalk}
+        {neotalk}"hmm?"{neotalk}
         
-        {clr1}"..nothing, {wvy}my dear little detective{wvy}"{clr1}
+        {krystalk}"..nothing, {wvy}my dear little detective{wvy}"{krystalk}
     }
   - johny_1 == 1 ?
     johny manster....
@@ -9937,9 +9938,9 @@ DLG SPR_9
     and truly there is nothing they cannot find out...
     ..they also have one of the most famous puppy instagram
     god, the videos are adorable, its almost criminal!
-    {clr1}"move along, buster!
+    {thirdpersontalk}"move along, buster!
     
-    and {shk}no{shk}, i dont give autographs!"{clr1}
+    and {shk}no{shk}, i dont give autographs!"{thirdpersontalk}
     
     ..yeesh.....
   - else ?
@@ -9952,28 +9953,28 @@ DLG SPR_a
 {
   - cousin_1 == 4 ?
     {sequence
-      - {clr3}"jeff manster, you are under arrest for the suspicion of murdering fransiska manster, everything you say will and can be used against you"{clr3}{monny_1 = 3}
+      - {neotalk}"jeff manster, you are under arrest for the suspicion of murdering fransiska manster, everything you say will and can be used against you"{neotalk}{monny_1 = 3}
         
-        {clr1}"what?"{clr1}{butler_1 = 3}
+        {jefftalk}"what?"{jefftalk}{butler_1 = 3}
         
-        {clr3}"you heard me"{clr3}{lili_1 = 3}
+        {neotalk}"you heard me"{neotalk}{lili_1 = 3}
         
-        {clr1}"{shk}this is all this bastard's plan isn't it!{shk}"{clr1}
+        {jefftalk}"{shk}this is all this bastard's plan isn't it!{shk}"{jefftalk}
         they pointed at krys, anger.. and maybe a little bit of fear flashing in their eyes..{johny_1 = 3}
         
-        {clr1}"{shk}you have no evidence against me!{shk}"{clr1}{master_1 = 7}
-        {clr3}"you can plead your case back at the station"{clr3}
-        {clr1}"{shk}i.. I DIDN'T KILL THEM!!{shk}"{clr1}
+        {jefftalk}"{shk}you have no evidence against me!{shk}"{jefftalk}{master_1 = 7}
+        {neotalk}"you can plead your case back at the station"{neotalk}
+        {jefftalk}"{shk}i.. I DIDN'T KILL THEM!!{shk}"{jefftalk}
         
-        {clr3}"please put your hands behind your back"{clr3}
-        {clr1}"{shk}THE GUN SHOT SOUNDED THE MOMENT I OPENED THE DOOR!! I DIDN'T EVEN SEE WHO DID IT!!{shk}"{clr1}{bleed1 = 0}
+        {neotalk}"please put your hands behind your back"{neotalk}
+        {jefftalk}"{shk}THE GUN SHOT SOUNDED THE MOMENT I OPENED THE DOOR!! I DIDN'T EVEN SEE WHO DID IT!!{shk}"{jefftalk}{bleed1 = 0}
         
-        {clr1}"a likely story"{clr1}
+        {krystalk}"a likely story"{krystalk}
         
         krys sneered..{cousin_1 = 0}
         
-        {clr1}"you killed my parent and now you can't even admit it!"{clr1}
-        {clr1}"{shk}I DIDN'T!!!{shk}"{clr1}
+        {krystalk}"you killed my parent and now you can't even admit it!"{krystalk}
+        {jefftalk}"{shk}I DIDN'T!!!{shk}"{jefftalk}
         
         i put the handcuffs on jeff's hands and directed them to the door..{policedude_1 = 4}
         
@@ -9987,37 +9988,37 @@ DLG SPR_a
         i'd laugh at their name if i wasn't so afraid of them....{talk1 = 0}
         but i had to talk to everyone...
         
-        {clr3}"hello, i'd like to ask some question about the murder of fransiska manster"{clr3}
+        {neotalk}"hello, i'd like to ask some question about the murder of fransiska manster"{neotalk}
         
         they raised an eyebrow at me..
         
         ok.......
         
-        {clr3}"where were you at the time of the murder?"{clr3}
-        {clr1}"i dont know"{clr1}
+        {neotalk}"where were you at the time of the murder?"{neotalk}
+        {jefftalk}"i dont know"{jefftalk}
         
         they rolled their eyes barely looking in my direction at all..
-        {clr3}"have you seen fransiska today at all?"{clr3}
-        {clr1}"are you only going to ask me dumb questions?
-        how about no, im busy pal"{clr1}
-        
-        {clr1}"jeff... why don't you talk to the detective and answer the questions?"{clr1}
-        
-        {clr1}"well kryssy i dont feel like doing it, that's all"{clr1}
-        {clr1}"you don't want to find out who killed my m- fransiska?"{clr1}
+        {neotalk}"have you seen fransiska today at all?"{neotalk}
+        {jefftalk}"are you only going to ask me dumb questions?
+        how about no, im busy pal"{jefftalk}
+		
+        {krystalk}"jeff... why don't you talk to the detective and answer the questions?"{krystalk}
+		
+        {jefftalk}"well kryssy i dont feel like doing it, that's all"{jefftalk}
+        {krystalk}"you don't want to find out who killed my m- fransiska?"{krystalk}
         jeff looked at them with such contempt...
-        {clr1}"of course i do, but not by this {shk}cop{shk} you brought in from outside.. {shk}what ever are you thinking?{shk}"{clr1}
-        {clr1}"i want no bias"{clr1}
+        {jefftalk}"of course i do, but not by this {shk}cop{shk} you brought in from outside.. {shk}what ever are you thinking?{shk}"{jefftalk}
+        {krystalk}"i want no bias"{krystalk}
         
         jeff chuckled..
         
-        {clr1}"sure, i believe that"{clr1}
+        {jefftalk}"sure, i believe that"{jefftalk}
         
-        {clr1}"oh you-!"
+        {krystalk}"oh you-!"{krystalk}
         
-        "hm you're just a spoiled child"{clr1}
+        {jefftalk}"hm you're just a spoiled child"{jefftalk}
         
-        {clr1}"well you're just a {shk}DISPOSABLE GLOVE!{shk}"{clr1}
+        {krystalk}"well you're just a {shk}DISPOSABLE GLOVE!{shk}"{krystalk}
         i barely saw what was happening..
         it happened so fast..
         
@@ -10026,17 +10027,17 @@ DLG SPR_a
         the next like a wound up spring, jeff lunged....
         .......{clr2}{shk}ouch{shk}{clr2}
         
-        {clr1}"{shk}DETECTIVE!{shk} ......neo.."{clr1}
+        {krystalk}"{shk}DETECTIVE!{shk} ......neo.."{krystalk}
         
-        {clr1}"tch..."{clr1}
+        {jefftalk}"tch..."{jefftalk}
         
-        {clr1}"..why? ....{shk}why{shk} did you shield me?"{clr1}
+        {krystalk}"..why? ....{shk}why{shk} did you shield me?"{krystalk}
         ..{clr2}blood{clr2}....
         
         ..{clr2}blood{clr2} dripped from the scratch on my face....
-        {clr3}"its my duty to protect"{clr3}
+        {neotalk}"its my duty to protect"{neotalk}
         
-        {clr1}"..."{clr1}
+        {krystalk}"..."{krystalk}
         
         krys gazed at me as though they were seeing me for the first time...
         
@@ -10044,7 +10045,7 @@ DLG SPR_a
         
         ..........
         
-        {clr1}"{shk}ugh screw this, go away all of you!!{shk}"{clr1}
+        {jefftalk}"{shk}ugh screw this, go away all of you!!{shk}"{jefftalk}
         ..jeff turned away and stared at his phone...
         but i could see the screen was dark.....
       - ..................
@@ -10055,10 +10056,10 @@ DLG SPR_a
     jeff manster....
     
     truly terrifying but i had to talk to them...
-    {clr3}"hello-"{clr3}
+    {neotalk}"hello-"{neotalk}
     
-    {clr1}"{shk}CAN'T YOU SEE IM BUSY ON THE PHONE!!!!{shk}"{clr1}
-    "..its fine, we'll talk to jeff later, come on {wvy}little detective{wvy}, let's talk to the others"
+    {jefftalk}"{shk}CAN'T YOU SEE IM BUSY ON THE PHONE!!!!{shk}"{jefftalk}
+    {krystalk}"..its fine, we'll talk to jeff later, come on {wvy}little detective{wvy}, let's talk to the others"{krystalk}
   - cousin_1 == 1 ?
     fransiska's right-hand man....
     
@@ -10066,17 +10067,17 @@ DLG SPR_a
     
     no one knows their name...
     
-    {clr1}"goddamn it, mum!!
+    {jefftalk}"goddamn it, mum!!
     
-    my name is{clr1} {rbw}jeff{rbw}{clr1}!!
+    my name is{jefftalk} {rbw}jeff{rbw}{jefftalk}!!
     not jeffy or jiji!!!
-    quit it!!"{clr1}
+    quit it!!"{jefftalk}
     
-    {clr3}"..."{clr3}
+    {neotalk}"..."{neotalk}
     
-    {clr1}"w-what are you looking at?!!! 
+    {jefftalk}"w-what are you looking at?!!! 
     
-    h{shk}uh HUH!! GET OUT OF MY SIGHT, MORTAL!!"{shk}{clr1}
+    h{shk}uh HUH!! GET OUT OF MY SIGHT, MORTAL!!"{shk}{jefftalk}
     uh.. gulp... 
     i'd better leave them alone....
   - else ?
@@ -10088,39 +10089,39 @@ DLG SPR_b
 """
 {
   - master_1 == 7 ?
-    {clr1}"bye bye, {wvy}my little detective!{wvy}"{clr1}{climax1 = 1}
+    {krystalk}"bye bye, {wvy}my little detective!{wvy}"{krystalk}{climax1 = 1}
     
     and with a heavy heart, i left...
   - master_1 == 4 ?
-    {clr1}"don't worry i'll help you talk to mx. monny"{clr1}
-    {clr3}"thanks.."{clr3}
+    {krystalk}"don't worry i'll help you talk to mx. monny"{krystalk}
+    {neotalk}"thanks.."{neotalk}
     
-    {clr1}"you have nothing to fear when im with you"{clr1}
+    {krystalk}"you have nothing to fear when im with you"{krystalk}
     ..i think i have a lot to fear, thank you very much, handsome {shk}killer{shk}
   - master_1 == 3 ?
-    {clr1}"well that wasn't so bad"{clr1}
+    {krystalk}"well that wasn't so bad"{krystalk}
     
-    {clr3}".....i got nothing very useful and ended up making them cry which im sure won't end very well for me"{clr3}
-    {clr1}"you're exaggerating, {wvy}my little detective{wvy}"{clr1}
-    {clr3}"yeah yeah you'll keep me from getting killed"{clr3}
-    {clr1}"of course"{clr1}
+    {neotalk}".....i got nothing very useful and ended up making them cry which im sure won't end very well for me"{neotalk}
+    {krystalk}"you're exaggerating, {wvy}my little detective{wvy}"{krystalk}
+    {neotalk}"yeah yeah you'll keep me from getting killed"{neotalk}
+    {krystalk}"of course"{krystalk}
     
     well that did nothing to my insides...
     nothing at all...
   - kitchen1 == 2 ?
-    {clr1}"well that wasn't so bad"{clr1}
+    {krystalk}"well that wasn't so bad"{krystalk}
     
-    {clr3}".....i got nothing very useful and ended up making them cry which im sure won't end very well for me"{clr3}
-    {clr1}"you're exaggerating, {wvy}my little detective{wvy}"{clr1}
-    {clr3}"yeah yeah you'll keep me from getting killed"{clr3}
-    {clr1}"of course"{clr1}
+    {neotalk}".....i got nothing very useful and ended up making them cry which im sure won't end very well for me"{neotalk}
+    {krystalk}"you're exaggerating, {wvy}my little detective{wvy}"{krystalk}
+    {neotalk}"yeah yeah you'll keep me from getting killed"{neotalk}
+    {krystalk}"of course"{krystalk}
     
     well that did nothing to my insides...
     nothing at all...
   - master_1 == 1 ?
-    {clr1}"i thought you were going to check the roof first.. what kind of a detective even are you.."{clr1}
+    {krystalk}"i thought you were going to check the roof first.. what kind of a detective even are you.."{krystalk}
     
-    {clr3}"..."{clr3}
+    {neotalk}"..."{neotalk}
   - else ?
 
 }
@@ -10130,13 +10131,13 @@ DLG SPR_c
 """
 {
   - master_1 == 9 ?
-    {clr1}"its lovely to see here,
-    my dear neo"{clr1}
-    {clr3}"..."{clr3}
+    {krystalk}"its lovely to see here,
+    my dear neo"{krystalk}
+    {neotalk}"..."{neotalk}
     
-    {clr1}"have you decided to join me or did you want to see me for the last time?"{clr1}
+    {krystalk}"have you decided to join me or did you want to see me for the last time?"{krystalk}
     
-    {clr3}"i...."{clr3}
+    {neotalk}"i...."{neotalk}
     
     they sat on the couch drinking a glass of something, all poised and unruffled...
     
@@ -10146,17 +10147,17 @@ DLG SPR_c
     
     the way their eyes avoided mine..
     like they didn't want to see my rejection...
-    {clr3}"i'll join you..."{clr3}
+    {neotalk"i'll join you..."{neotalk}
     
     their eyes snapped to mine..
     
     i could feel the suspicion and surprise...
-    {clr1}"a trap wouldn't work, my dear neo, you won't be able to prove anything no matter how much you spy on me"{clr1}
-    {clr3}"i wasn't...."{clr3}
+    {krystalk}"a trap wouldn't work, my dear neo, you won't be able to prove anything no matter how much you spy on me"{krystalk}
+    {neotalk}"i wasn't...."{neotalk}
     
-    {clr1}"no?"{clr1}
+    {krystalk}"no?"{krystalk}
     
-    {clr3}"no.."{clr3}
+    {neotalk}"no.."{neotalk}
     
     they looked at me..
     
@@ -10172,7 +10173,7 @@ DLG SPR_c
     
     maybe it wasn't hopeless....
     
-    {clr1}"come here"{clr1}
+    {krystalk}"come here"{krystalk}
     
     they motioned..
     
@@ -10184,56 +10185,56 @@ DLG SPR_c
     i stepped onto my tippy toes and..
     ...................(exit "graveyard,9,13")
   - master_1 == 7 ?
-    {clr1}"bye bye, {wvy}my little detective!{wvy}"{clr1}{climax1 = 1}
+    {krystalk}"bye bye, {wvy}my little detective!{wvy}"{krystalk}{climax1 = 1}
     
     and with a heavy heart, i left...
   - master_1 == 6 ?
     {sequence
-      - {clr1}"..and here is the medikit"{clr1}{kitchen1 = 0}
+      - {krystalk}"..and here is the medikit"{krystalk}{kitchen1 = 0}
         
         we sat in silence as krys gently cleaned my face...
         they were even more breathtaking so close....
-        {clr3}"{shk}ouch!{shk}"{clr3}
+        {neotalk}"{shk}ouch!{shk}"{neotalk}
         
-        {clr1}"i'm being as gentle as i can, neo"{clr1}{cousin_1 = 4}
-        {clr3}"i know.."{clr3}{johny_1 = 3}
+        {krystalk}"i'm being as gentle as i can, neo"{krystalk}{cousin_1 = 4}
+        {neotalk}"i know.."{neotalk}{johny_1 = 3}
         
-        {clr1}"..."{clr1}{lili_1 = 3}
+        {krystalk}"..."{krystalk}{lili_1 = 3}
         
-        {clr3}"..."{clr3}{monny_1 = 3}
+        {neotalk}"..."{neotalk}{monny_1 = 3}
         
-        {clr1}"so have you figured it out by now?"{clr1}
-        {clr3}"you mean is it jeff?"{clr3}
+        {krystalk}"so have you figured it out by now?"{krystalk}
+        {neotalk}"you mean is it jeff?"{neotalk}
         
-        {clr1}"..."{clr1}
+        {krystalk}"..."{krystalk}
         
-        {clr3}"all the talk about bias.."{clr3}
+        {neotalk}"all the talk about bias.."{neotalk}
         
-        {clr1}"i suspected but everyone knows i dont like them"{clr1}
-        {clr3}"i don't kno if i have enough evidence.."{clr3}
-        {clr1}"its easy enough to fake some"{clr1}
+        {krystalk}"i suspected but everyone knows i dont like them"{krystalk}
+        {neotalk}"i don't kno if i have enough evidence.."{neotalk}
+        {krystalk}"its easy enough to fake some"{krystalk}
         
         i looked at krys...{bleed1 = 1}
         
         they really were serious...
         
-        {clr3}"thats illegal"{clr3}
+        {neotalk}"thats illegal"{neotalk}
         
-        {clr1}"aw, {wvy}my little detective{wvy}, don't you know who you're talking to"{clr1}
-        {clr3}"..."{clr3}
+        {krystalk}"aw, {wvy}my little detective{wvy}, don't you know who you're talking to"{krystalk}
+        {neotalk}"..."{neotalk}
         
         {clr1}"well i think i'm done, your face looks much better now"{clr1}
-        {clr3}"ah.. thank you"{clr3}
+        {neotalk}"ah.. thank you"{neotalk}
         
-        {clr1}"let's go then"{clr1}
+        {krystalk}"let's go then"{krystalk}
         
         they smiled and i couldn't help but smile back...
         not everyone seemed that terrible in this place....
-      - {clr1}"well what are we waiting for?"{clr1}
+      - {neotalk}"well what are we waiting for?"{neotalk}
         
         they grinned..
         
-        {clr3}"yes, yes, we're going!"{clr3}
+        {krystalk}"yes, yes, we're going!"{krystalk}
     }
   - else ?
 
@@ -10244,17 +10245,17 @@ DLG SPR_d
 """
 {
   - monny_1 == 3 ?
-    {clr1}"oh no no no... jeff is such a sweet person.. its hard to imagine this..."{clr1}
+    {thirdpersontalk}"oh no no no... jeff is such a sweet person.. its hard to imagine this..."{thirdpersontalk}
     
     they seemed like they might start tearing up again...
     so i left them alone....
   - monny_1 == 2 ?
     {sequence
-      - {clr1}"you shouldn't be here!"{clr1}
+      - {thirdpersontalk}"you shouldn't be here!"{thirdpersontalk}
         
         they glared at me..{kitchen1 = 1}
         
-        {clr1}"{shk}out of my kitchen!{shk}"{clr1}
+        {thirdpersontalk}"{shk}out of my kitchen!{shk}"{thirdpersontalk}
         
         mx. monny....{talk1 = talk1 + 1}
         
@@ -10262,14 +10263,14 @@ DLG SPR_d
         
         a complete mystery to me..
         
-        {clr1}"its alright, they are with me,
-        i've asked them to investigate my m- frasiska's murder"{clr1}
+        {krystalk}"its alright, they are with me,
+        i've asked them to investigate my m- frasiska's murder"{krystalk}
         
         they immediately softened when they heard krys's voice..
-        {clr1}"oh of course, darling, if you say so"{clr1}
+        {thirdpersontalk}"oh of course, darling, if you say so"{thirdpersontalk}
         turning to me look at me once more
         i tried not to fidget too much....
-        {clr1}"and what does the detective want to know?"{clr1}
+        {thirdpersontalk}"and what does the detective want to know?"{thirdpersontalk}
         there isn't a lot that makes me feel that nervous..
         well no thats a lie...
         
@@ -10283,29 +10284,29 @@ DLG SPR_d
         not a new feeling..
         
         but not a pleasant one regardless.....
-        {clr3}"i just need to make sure of everyone's alibis.."{clr3}
-        {clr1}"well i was in the kitchen most of the time"{clr1}
-        {clr3}"have you left the kitchen at all?
-        maybe gone on the roof?"{clr3}
+        {neotalk}"i just need to make sure of everyone's alibis.."{neotalk}
+        {thirdpersontalk}"well i was in the kitchen most of the time"{thirdpersontalk}
+        {neotalk}"have you left the kitchen at all?
+        maybe gone on the roof?"{neotalk}
         
-        {clr1}"no, i've only been in the front room as i was putting out more food and drinks"{clr1}
+        {thirdpersontalk}"no, i've only been in the front room as i was putting out more food and drinks"{thirdpersontalk}
         
-        {clr3}"i'll need to verify that with some of the other.. guests"{clr3}
+        {neotalk}"i'll need to verify that with some of the other.. guests"{neotalk}
         the look they gave me clearly expressed that they thought i was wasting their time..
         
-        {clr1}"uh.. um.... can you tell me a little bit about fransiska?"{clr1}
+        {neotalk}"uh.. um.... can you tell me a little bit about fransiska?"{neotalk}
         they were thoroughly annoyed with me but the mention of fransiska's name seemed to sadden them enough to forget about their feelings towards me..
-        {clr1}"they were..."{clr1}
+        {thirdpersontalk}"they were..."{thirdpersontalk}
         
         they looked over at krys..
         
-        {clr1}"your parent was truly the best boss one can have.. the best family..
+        {thirdpersontalk}"your parent was truly the best boss one can have.. the best family..
         
-        this is.. just the biggest loss..."{clr1}
+        this is.. just the biggest loss..."{thirdpersontalk}
         tears sprang to their eyes..
         
         sometimes i think i forget even the most hardened criminals are still human underneath it all....
-        {clr1}"i... i still remember it like yesterday..
+        {thirdpersontalk}"i... i still remember it like yesterday..
         stealing bikes and breaking hearts..
         smoking on top of denny's after a successful heist..
         all the getaways..
@@ -10314,13 +10315,13 @@ DLG SPR_d
         
         never even stopped after they had you..
         remember how you got sand everywhere and they just grabbed you by your feet and shook you to try to get it all out...
-        you never complained again"{clr1}
+        you never complained again"{thirdpersontalk}
         
         they laughed..
         
         a sort of choked sound..
         
-        {clr3}"um.. thank you mx.. i think i don't have anymore questions at the moment...."{clr3}
+        {neotalk}"um.. thank you mx.. i think i don't have anymore questions at the moment...."{neotalk}
         
         they looked at it with almost surprise...
         i think they forgot i was there..
@@ -10329,11 +10330,11 @@ DLG SPR_d
         i think im going to stay away...
     }
   - monny_1 == 1 ?
-    {clr1}"no, no, no!! 
+    {thirdpersontalk}"no, no, no!! 
     
     you're not supposed to be here!!
     
-    out, out!"{clr1}
+    out, out!"{thirdpersontalk}
     
     ..guess i should check out the roof first..
   - else ?
@@ -10379,31 +10380,31 @@ DLG ITM_b
     
     but...
     
-    {clr3}"where is the body?"{clr3}
+    {neotalk}"where is the body?"{neotalk}
     
-    {clr1}"oh i've already made arrangements to bury it in the family graveyard"{clr1}
+    {krystalk}"oh i've already made arrangements to bury it in the family graveyard"{krystalk}
     
     i whipped my head around to stare at the one person i didn't wish to see here...
     
-    {clr3}"krys..."{clr3}
+    {neotalk}"krys..."{neotalk}
     
-    {clr1}"hello, {wvy}my little detective{wvy}"{clr1}
+    {krystalk}"hello, {wvy}my little detective{wvy}"{krystalk}
     
-    {clr3}"..."{clr3}
+    {neotalk}"..."{neotalk}
     
-    {clr1}"oh did you figure it out?"{clr1}
+    {krystalk}"oh did you figure it out?"{krystalk}
     
     they seemed so nonchalant...
     
-    {clr3}"{shk}krys{shk}.."{clr3}
+    {neotalk}"{shk}krys{shk}.."{neotalk}
     
     they rolled their eyes..
     
-    {clr3}"{shk}why{shk}..?"{clr3}
+    {neotalk}"{shk}why{shk}..?"{neotalk}
     
     they sighed..
     
-    {clr1}"oh neo, you're such a darling.."{clr1}
+    {krystalk}"oh neo, you're such a darling.."{krystalk}
     no...
     
     no..........
@@ -10435,7 +10436,7 @@ DLG ITM_c
 DLG ITM_d
 """
 {sequence
-  - {policedude_1 = 0}{shk}{clr1}KNOCK KNOCK KNOCK{clr1}{shk}(js "window.textboxColour = [58,65,72,255];")
+  - {policedude_1 = 0}{shk}*KNOCK KNOCK KNOCK*{shk}(js "window.textboxColour = [58,65,72,255];")
   - 
 }
 """
@@ -10583,35 +10584,35 @@ HERE LIES FRANSISKA MANSTER
 DLG SPR_h
 """
 {sequence
-  - {clr3}"well its over now.....
+  - {neotalk}"well its over now.....
     
-    the funeral.."{clr3}
+    the funeral.."{neotalk}
     
-    {clr1}"it was a lovely one"{clr1}
+    {krystalk}"it was a lovely one"{krystalk}
     
-    {clr3}"yeah.."{clr3}
+    {neotalk}"yeah.."{neotalk}
     
-    {clr1}"only the best for my parent..."{clr1}
+    {krystalk}"only the best for my parent..."{krystalk}
     
-    {clr3}"..."{clr3}
+    {neotalk}"..."{neotalk}
     
-    {clr1}"oh darling, its not the first case of parricide"{clr1}
-    {clr3}"just one in the sea of many..."{clr3}
+    {krystalk}"oh darling, its not the first case of parricide"{krystalk}
+    {neotalk}"just one in the sea of many..."{neotalk}
     
-    {clr1}"exactly!"{clr1}
+    {krystalk}"exactly!"{krystalk}
     
-    {clr3}"..."{clr3}
+    {neotalk}"..."{neotalk}
     
-    {clr1}"come on, darling, let's go home"{clr1}
-    {clr3}"yeah.."{clr3}
+    {krystalk}"come on, darling, let's go home"{krystalk}
+    {neotalk}"yeah.."{neotalk}
     
     .....
     
     goodbye fransiska manster...
     
     may you rest in peace......
-  - {clr1}"come on, darling, let's go home"{clr1}
-    {clr3}"yeah.."{clr3}
+  - {krystalk}"come on, darling, let's go home"{krystalk}
+    {neotalk}"yeah.."{neotalk}
     
     .....
     
@@ -10624,11 +10625,11 @@ DLG SPR_h
 DLG SPR_i
 """
 {sequence
-  - {clr3}"..find evidence that the evidence is false and-"{clr3}
-    {clr1}"detective glaze, for the last time, the evidence is sound and you are not a part of this case anymore"{clr1}
-    {clr3}"but-"{clr3}
+  - {neotalk}"..find evidence that the evidence is false and-"{neotalk}
+    {thirdpersontalk}"detective glaze, for the last time, the evidence is sound and you are not a part of this case anymore"{thirdpersontalk}
+    {neotalk}"but-"{neotalk}
     
-    {clr1}"i'm sorry, glaze, but there's nothing to be done, i'm sure inspector shadi will do everything in their power to figure it out"{clr1}
+    {thirdpersontalk}"i'm sorry, glaze, but there's nothing to be done, i'm sure inspector shadi will do everything in their power to figure it out"{thirdpersontalk}
     
     ..they were right.....
     
@@ -10639,11 +10640,11 @@ DLG SPR_i
     
     there is too much evidence against jeff....
     am i defeated?
-  - {clr1}"i'm sorry but maybe you should take a break.. take a paid leave, relax, spend time with your family"{clr1}
-    {clr3}"..."{clr3}
+  - {thirdpersontalk}"i'm sorry but maybe you should take a break.. take a paid leave, relax, spend time with your family"{thirdpersontalk}
+    {neotalk}"..."{neotalk}
     
-    {clr1}"rest, winding yourself up won't do you any good"{clr1}
-    {clr3}"..thank you, sir"{clr3}
+    {thirdpersontalk}"rest, winding yourself up won't do you any good"{thirdpersontalk}
+    {neotalk}"..thank you, sir"{neotalk}
 }
 """
 
@@ -10653,36 +10654,36 @@ DLG ITM_j
 DLG SPR_j
 """
 {sequence
-  - {clr1}"dude.. you okay?"{clr1}
+  - {stokertalk}"dude.. you okay?"{stokertalk}
     
-    {clr3}"...."{clr3}
+    {neotalk}"...."{neotalk}
     
-    {clr1}"they tell you to drop it again?"{clr1}
-    {clr3}"yeah.."{clr3}
+    {stokertalk}"they tell you to drop it again?"{stokertalk}
+    {neotalk}"yeah.."{neotalk}
     
-    {clr1}"you're obsessed.. even if you are right, you're killing yourself with this"{clr1}
+    {stokertalk}"you're obsessed.. even if you are right, you're killing yourself with this"{stokertalk}
     
-    {clr3}"i just.. i dont want them to win.."{clr3}
-    {clr1}"sometimes you have to let things go.. its not like jeff manster isn't a criminal either..."{clr1}
-    {clr3}"yeah... but it feels unfair.."{clr3}
+    {neotalk}"i just.. i dont want them to win.."{neotalk}
+    {stokertalk}"sometimes you have to let things go.. its not like jeff manster isn't a criminal either..."{stokertalk}
+    {neotalk}"yeah... but it feels unfair.."{neotalk}
     
-    {clr1}"dude, take a break and then maybe with a fresh mind you'll find a crack"{clr1}
+    {stokertalk}"dude, take a break and then maybe with a fresh mind you'll find a crack"{stokertalk}
     
     maybe stoker was right...
     
     i just needed to rest and come back with fresh eyes...
-    {clr3}"thanks, stoker"{clr3}
+    {neotalk}"thanks, stoker"{neotalk}
     
-    {clr1}"no problem, my guy"{clr1}
-  - {clr1}"go take the rest of the day off, i'll tell the boss, that's pretty much what they've been telling you.."{clr1}
-    {clr3}"thanks, man"{clr3}
+    {stokertalk}"no problem, my guy"{stokertalk}
+  - {stokertalk}"go take the rest of the day off, i'll tell the boss, that's pretty much what they've been telling you.."{stokertalk}
+    {neotalk}"thanks, man"{neotalk}
     
-    {clr1}"yeah i got your back, pal"{clr1}
+    {stokertalk}"yeah i got your back, pal"{stokertalk}
     
-    {clr3}"you're kind of the best"{clr3}
+    {neotalk}"you're kind of the best"{neotalk}
     
-    {clr1}"go, get out of here, you menace!"{clr1}
-    {clr3}"ha ha i'm going!"{clr3}
+    {stokertalk}"go, get out of here, you menace!"{stokertalk}
+    {neotalk}"ha ha i'm going!"{neotalk}
 }
 """
 
@@ -23721,7 +23722,7 @@ body {
 	margin:0px;
 	padding:0px;
 	overflow:hidden;
-	background:#465378;
+	background:#000;
 }
 
 #game {
@@ -33834,6 +33835,345 @@ inject$1(/(\/\/draw tiles)/, 'drawTile(getSpriteImage(player(), getRoomPal(room.
 
 }(window));
 </script>
+<script>
+
+/**
+🅰
+@file custom text effect
+@summary make {custom}text effects{custom}
+@license MIT
+@version 2.1.2
+@requires 5.3
+@author Sean S. LeBlanc
+@description
+Adds support for a custom text effect
+e.g. "normal text {my-effect}custom wavy text{my-effect}"
+Multiple text effects can be added this way.
+Without the hack, the game will still run normally since
+bitsy just ignores text tags that aren't supported.
+Because the dialog system uses private variables,
+this one does some silly things with code injection.
+HOW TO USE:
+1. Copy-paste this script into a script tag after the bitsy source
+2. Update the `hackOptions` object at the top of the script with your custom effects
+TEXT EFFECT NOTES:
+Each effect looks like:
+	key: function() {
+		this.DoEffect = function (char, time) {
+			// effect code
+		}
+	}
+The key is the text you'll write inside {} in bitsy to trigger the effect
+`this.DoEffect` is called every frame for the characters the effect is applied to
+The first argument is `char`, an individual character, which has the following properties:
+	offset: offset from actual position in pixels. starts at {x:0, y:0}
+	color: color of rendered text in [0-255]. starts at {r:255, g:255, b:255, a:255}
+	bitmap: character bitmap as array of pixels
+	row: vertical position in rows (doesn't affect rendering)
+	col: horizontal position in characters (doesn't affect rendering)
+`row`, `col`, and `offset` are reset every frame
+`color` and any custom properties are reset when the dialog page is changed
+`bitmap` is not reset! This edits the character in the font data directly
+A few helpers are provided under `window.customTextEffects` for more complex effects:
+	- `saveOriginalChar`: saves the character string on `char`
+	- `setBitmap`: sets bitmap based on a new character
+	- `editBitmapCopy`: copies the character bitmap and runs an edit function once
+	
+The second argument is `time`, which is the time in milliseconds
+A number of example effects are included
+*/
+this.hacks = this.hacks || {};
+this.hacks.custom_text_effect = (function (exports,bitsy) {
+'use strict';
+var hackOptions = { // onion change the dialog colors here
+	neotalk: function () {
+		// dialog color for neo
+		this.DoEffect = function (char, time) {
+			char.color.r = 255;
+			char.color.g = 211;
+			char.color.b = 99;
+		};
+	},
+	krystalk: function () {
+		// dialog color for krys
+		this.DoEffect = function (char, time) {
+			char.color.r = 255;
+			char.color.g = 120;
+			char.color.b = 120;
+		};
+	},
+	jefftalk: function () {
+		// dialog color for jeff
+		this.DoEffect = function (char, time) {
+			char.color.r = 232;
+			char.color.g = 120;
+			char.color.b = 0;
+		};
+	},
+	thirdpersontalk: function () {
+		// dialog color for third person in conversation
+		this.DoEffect = function (char, time) {
+			char.color.r = 173;
+			char.color.g = 173;
+			char.color.b = 173;
+		};
+	},
+	stokertalk: function () {
+		// dialog color for stoker
+		this.DoEffect = function (char, time) {
+			char.color.r = 119;
+			char.color.g = 141;
+			char.color.b = 201;
+		};
+	}
+};
+
+bitsy = bitsy && bitsy.hasOwnProperty('default') ? bitsy['default'] : bitsy;
+
+/**
+@file utils
+@summary miscellaneous bitsy utilities
+@author Sean S. LeBlanc
+*/
+
+/*
+Helper used to replace code in a script tag based on a search regex
+To inject code without erasing original string, using capturing groups; e.g.
+	inject(/(some string)/,'injected before $1 injected after')
+*/
+function inject(searchRegex, replaceString) {
+	// find the relevant script tag
+	var scriptTags = document.getElementsByTagName('script');
+	var scriptTag;
+	var code;
+	for (var i = 0; i < scriptTags.length; ++i) {
+		scriptTag = scriptTags[i];
+		var matchesSearch = scriptTag.textContent.search(searchRegex) !== -1;
+		var isCurrentScript = scriptTag === document.currentScript;
+		if (matchesSearch && !isCurrentScript) {
+			code = scriptTag.textContent;
+			break;
+		}
+	}
+
+	// error-handling
+	if (!code) {
+		throw 'Couldn\'t find "' + searchRegex + '" in script tags';
+	}
+
+	// modify the content
+	code = code.replace(searchRegex, replaceString);
+
+	// replace the old script tag with a new one using our modified code
+	var newScriptTag = document.createElement('script');
+	newScriptTag.textContent = code;
+	scriptTag.insertAdjacentElement('afterend', newScriptTag);
+	scriptTag.remove();
+}
+
+/**
+ * Helper for getting an array with unique elements 
+ * @param  {Array} array Original array
+ * @return {Array}       Copy of array, excluding duplicates
+ */
+function unique(array) {
+	return array.filter(function (item, idx) {
+		return array.indexOf(item) === idx;
+	});
+}
+
+/**
+@file kitsy-script-toolkit
+@summary makes it easier and cleaner to run code before and after Bitsy functions or to inject new code into Bitsy script tags
+@license WTFPL (do WTF you want)
+@version 4.0.1
+@requires Bitsy Version: 4.5, 4.6
+@author @mildmojo
+@description
+HOW TO USE:
+  import {before, after, inject, addDialogTag, addDeferredDialogTag} from "./helpers/kitsy-script-toolkit";
+  before(targetFuncName, beforeFn);
+  after(targetFuncName, afterFn);
+  inject(searchRegex, replaceString);
+  addDialogTag(tagName, dialogFn);
+  addDeferredDialogTag(tagName, dialogFn);
+  For more info, see the documentation at:
+  https://github.com/seleb/bitsy-hacks/wiki/Coding-with-kitsy
+*/
+
+
+// Ex: inject(/(names.sprite.set\( name, id \);)/, '$1console.dir(names)');
+function inject$1(searchRegex, replaceString) {
+	var kitsy = kitsyInit();
+	kitsy.queuedInjectScripts.push({
+		searchRegex: searchRegex,
+		replaceString: replaceString
+	});
+}
+
+function kitsyInit() {
+	// return already-initialized kitsy
+	if (bitsy.kitsy) {
+		return bitsy.kitsy;
+	}
+
+	// Initialize kitsy
+	bitsy.kitsy = {
+		queuedInjectScripts: [],
+		queuedBeforeScripts: {},
+		queuedAfterScripts: {}
+	};
+
+	var oldStartFunc = bitsy.startExportedGame;
+	bitsy.startExportedGame = function doAllInjections() {
+		// Only do this once.
+		bitsy.startExportedGame = oldStartFunc;
+
+		// Rewrite scripts and hook everything up.
+		doInjects();
+		applyAllHooks();
+
+		// Start the game
+		bitsy.startExportedGame.apply(this, arguments);
+	};
+
+	return bitsy.kitsy;
+}
+
+
+function doInjects() {
+	bitsy.kitsy.queuedInjectScripts.forEach(function (injectScript) {
+		inject(injectScript.searchRegex, injectScript.replaceString);
+	});
+	_reinitEngine();
+}
+
+function applyAllHooks() {
+	var allHooks = unique(Object.keys(bitsy.kitsy.queuedBeforeScripts).concat(Object.keys(bitsy.kitsy.queuedAfterScripts)));
+	allHooks.forEach(applyHook);
+}
+
+function applyHook(functionName) {
+	var functionNameSegments = functionName.split('.');
+	var obj = bitsy;
+	while (functionNameSegments.length > 1) {
+		obj = obj[functionNameSegments.shift()];
+	}
+	var lastSegment = functionNameSegments[0];
+	var superFn = obj[lastSegment];
+	var superFnLength = superFn ? superFn.length : 0;
+	var functions = [];
+	// start with befores
+	functions = functions.concat(bitsy.kitsy.queuedBeforeScripts[functionName] || []);
+	// then original
+	if (superFn) {
+		functions.push(superFn);
+	}
+	// then afters
+	functions = functions.concat(bitsy.kitsy.queuedAfterScripts[functionName] || []);
+
+	// overwrite original with one which will call each in order
+	obj[lastSegment] = function () {
+		var returnVal;
+		var args = [].slice.call(arguments);
+		var i = 0;
+
+		function runBefore() {
+			// All outta functions? Finish
+			if (i === functions.length) {
+				return returnVal;
+			}
+
+			// Update args if provided.
+			if (arguments.length > 0) {
+				args = [].slice.call(arguments);
+			}
+
+			if (functions[i].length > superFnLength) {
+				// Assume funcs that accept more args than the original are
+				// async and accept a callback as an additional argument.
+				return functions[i++].apply(this, args.concat(runBefore.bind(this)));
+			} else {
+				// run synchronously
+				returnVal = functions[i++].apply(this, args);
+				if (returnVal && returnVal.length) {
+					args = returnVal;
+				}
+				return runBefore.apply(this, args);
+			}
+		}
+
+		return runBefore.apply(this, arguments);
+	};
+}
+
+function _reinitEngine() {
+	// recreate the script and dialog objects so that they'll be
+	// referencing the code with injections instead of the original
+	bitsy.scriptModule = new bitsy.Script();
+	bitsy.scriptInterpreter = bitsy.scriptModule.CreateInterpreter();
+
+	bitsy.dialogModule = new bitsy.Dialog();
+	bitsy.dialogRenderer = bitsy.dialogModule.CreateRenderer();
+	bitsy.dialogBuffer = bitsy.dialogModule.CreateBuffer();
+}
+
+
+
+
+
+// custom text effects are injected,
+// so need to store helpers somewhere accessible
+// from outside of hack scope
+window.customTextEffects = {
+	// helper for caching original character string on character object
+	saveOriginalChar: function (char) {
+		if (char.original !== undefined) {
+			return;
+		}
+		var font = window.fontManager.Get(window.fontName);
+		var characters = Object.entries(font.getData());
+		var character = characters.find(function(keyval){
+			return keyval[1].toString() === char.bitmap.toString();
+		});
+		char.original = String.fromCharCode(character[0]);
+	},
+	// helper for setting new character bitmap by string on character object
+	setBitmap: function (char, c) {
+		char.bitmap = window.fontManager.Get(window.fontName).getChar(c);
+	},
+	// helper for editing bitmap without affecting other characters
+	editBitmapCopy: function (char, editFn) {
+		if (char.originalBitmap !== undefined) {
+			return;
+		}
+		char.originalBitmap = char.bitmap;
+		char.bitmap = char.bitmap.slice();
+		editFn(char.bitmap);
+	}
+};
+
+// generate code for each text effect
+var functionMapCode = '';
+var textEffectCode = '';
+for (var i in hackOptions) {
+	if (hackOptions.hasOwnProperty(i)) {
+		functionMapCode += 'functionMap.set("' + i + '", function (environment, parameters, onReturn) {addOrRemoveTextEffect(environment, "' + i + '");onReturn(null);});';
+		textEffectCode += 'TextEffects["' + i + '"] = new (' + hackOptions[i].toString() + ')();';
+	}
+}
+
+// inject custom text effect code
+inject$1(/(var functionMap = new Map\(\);)/, '$1' + functionMapCode);
+inject$1(/(var TextEffects = new Map\(\);)/, '$1' + textEffectCode);
+
+exports.hackOptions = hackOptions;
+
+return exports;
+
+}({},window));
+
+</script>
 
 <script>
 
@@ -33845,13 +34185,10 @@ inject$1(/(\/\/draw tiles)/, 'drawTile(getSpriteImage(player(), getRoomPal(room.
 @version 2.1.4
 @requires Bitsy Version: 5.1
 @author Sean S. LeBlanc
-
 @description
 Adds support for gamepad input.
-
 Directional input is mapped to the left and right analog sticks, the dpad, and the face buttons (e.g. ABXY).
 The same hold-to-move logic used for keyboard input is shared with the gamepad input.
-
 HOW TO USE:
 Copy-paste this script into a script tag after the bitsy source
 */
@@ -34288,24 +34625,20 @@ function unique(array) {
 }
 
 /**
-
 @file kitsy-script-toolkit
 @summary makes it easier and cleaner to run code before and after Bitsy functions or to inject new code into Bitsy script tags
 @license WTFPL (do WTF you want)
 @version 4.0.1
 @requires Bitsy Version: 4.5, 4.6
 @author @mildmojo
-
 @description
 HOW TO USE:
   import {before, after, inject, addDialogTag, addDeferredDialogTag} from "./helpers/kitsy-script-toolkit";
-
   before(targetFuncName, beforeFn);
   after(targetFuncName, afterFn);
   inject(searchRegex, replaceString);
   addDialogTag(tagName, dialogFn);
   addDeferredDialogTag(tagName, dialogFn);
-
   For more info, see the documentation at:
   https://github.com/seleb/bitsy-hacks/wiki/Coding-with-kitsy
 */
@@ -34484,9 +34817,7 @@ after('update', function(){
 
 }(window));
 
-
 </script>
-
 </head>
 
 <!-- DOCUMENT BODY -->
