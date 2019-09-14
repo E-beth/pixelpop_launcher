@@ -1,3 +1,7 @@
+html {
+	zoom: 150%;
+}
+
 /* border-box everything for easier dev */
 * {
 	-webkit-box-sizing: border-box;
@@ -133,22 +137,16 @@ body {
 }
 
 #game_select {
-	flex: 3;
+	flex: 4;
 	height: 100%;
 	display: grid;
 	grid-gap: 1rem;
 	grid-auto-rows: min-content;
-	grid-template-columns: repeat(4, 1fr);
-}
-
-@media only screen and (max-width: 50rem) {
-	#game_select {
-		grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
-	}
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 #game_info {
-	flex: 2;
+	flex: 3;
 	max-width: 40rem;
 }
 
