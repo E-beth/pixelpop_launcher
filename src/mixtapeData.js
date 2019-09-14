@@ -13,7 +13,7 @@ var mixtape_games = solo ? {
 		author: "Em Lindqvist, @embotronic",
 		src: "games/beckys_apple.html",
 		blurb: "When I was a kid, there was a big tree with pink apples in our yard. One winter it snowed too hard, and the tree cracked down the middle because of the weight. Nothing lasts forever.",
-		colors: ['#ffc2c2', '#fa7d95'],
+		colors: ['#ffc2c2', '#c43b56'],
 	},
 	space_bubble_cat: {
 		title: "Space Bubble Cat",
@@ -27,7 +27,7 @@ var mixtape_games = solo ? {
 		author: "A Yolland, @AYolland",
 		src: "games/fever.html",
 		blurb: "I wanted to make this game because it was a story I could tell primarily with color, and because it is an issue close to my heart. If you want to know more about coral bleaching, try globalcoralbleaching.org",
-		colors: ['#13d1d9', '#fff277'],
+		colors: ['#1f9fa3', '#fff277'],
 	},
 	pretty_dark: {
 		title: "It's Pretty Dark",
@@ -64,21 +64,21 @@ var mixtape_games = solo ? {
 		author: "",
 		src: "games/mystery_dungeon.html",
 		blurb: "Come visit the strange underground! The dungeon was built as an exquisite corpse - every room was constructed separately with only variables being shared between participants and the final layout of the maze was randomised. The maze wraps round at the edges and you start with 2 Bits, the currency of the Mystery Dungeon. There's no overall win state, although there are some hidden quests.\n \n Organized by @Ducklingsmith \n \n Rooms: 4,255,246 by Marzipan Recognition Alloy -*- A Dark Place by Flowerditch -*- A River Apart by Rarelikeaunicorn -*- Alchemist by Nicole Voec -*- Bird Village by Sarah Gould -*- The Bits Coin Mine by Mozz -*- Chillzone by Ruin -*- The Crab Room by Emma Daues -*- Crows by Becklespinax -*- Crumpet Seller by Lenny Magner -*- Dive Bar/Back Alley by AYolland -*- Drifter's Crossing by Natalie Clayton -*- The Factory by Ian Martin -*- Hall X by Dan Lance -*- Haunted Hotel by W J Holly -*- Jborictu'a by Wyvy -*- Kaiju by Mark Wonnacott -*- Legend by Kai -*- Meet the Thom(p)sons by Peter Februar -*- Mushroom Forest by Teri -*- My First Bitsy by Sergio Cornaga -*- Pan's Dance Party by Pan -*- Port-o-Potties by Lumpen -*- Purple Beach by Em Lindqvist -*- The Red Library by David Mowatt -*- Reflection by Brandon Thread -*- Relaxzone by Onion -*- The Rift by Laiska -*- Saltwater Room by Marisol -*- Sewer Ballet by AshGary -*- Swamp Room by Ebeth -*- Ulgomogoth the Sizable by Skeleton Hugs -*- Vortex by Grey Burnett -*- Wishing Well by Sean S. LeBlanc",
-		colors: ['#DEE3D6', '#567CBD'],
+		colors: ['#DEE3D6', '#345383'],
 	},
 	mystery_dungeon_2: {
 		title: "BITSY MYSTERY DUNGEON 2",
 		author: "",
 		src: "games/mystery_dungeon_2.html",
 		blurb: "Come visit the strange underground! The dungeon was built as an exquisite corpse - every room was constructed separately with only variables being shared between participants and the final layout of the maze was randomised. The maze wraps round at the edges and you start with 2 Bits, the currency of the Mystery Dungeon. There's no overall win state, although there are some hidden quests.\n \n Organized by @Ducklingsmith \n \n Rooms: 4,255,246 by Marzipan Recognition Alloy -*- A Dark Place by Flowerditch -*- A River Apart by Rarelikeaunicorn -*- Alchemist by Nicole Voec -*- Bird Village by Sarah Gould -*- The Bits Coin Mine by Mozz -*- Chillzone by Ruin -*- The Crab Room by Emma Daues -*- Crows by Becklespinax -*- Crumpet Seller by Lenny Magner -*- Dive Bar/Back Alley by AYolland -*- Drifter's Crossing by Natalie Clayton -*- The Factory by Ian Martin -*- Hall X by Dan Lance -*- Haunted Hotel by W J Holly -*- Jborictu'a by Wyvy -*- Kaiju by Mark Wonnacott -*- Legend by Kai -*- Meet the Thom(p)sons by Peter Februar -*- Mushroom Forest by Teri -*- My First Bitsy by Sergio Cornaga -*- Pan's Dance Party by Pan -*- Port-o-Potties by Lumpen -*- Purple Beach by Em Lindqvist -*- The Red Library by David Mowatt -*- Reflection by Brandon Thread -*- Relaxzone by Onion -*- The Rift by Laiska -*- Saltwater Room by Marisol -*- Sewer Ballet by AshGary -*- Swamp Room by Ebeth -*- Ulgomogoth the Sizable by Skeleton Hugs -*- Vortex by Grey Burnett -*- Wishing Well by Sean S. LeBlanc",
-		colors: ['#DEE3D6', '#567CBD'],
+		colors: ['#DEE3D6', '#345383'],
 	},
 	jimjam: {
 		title: "The Bitsy Jim Jam",
 		author: "",
 		src: "games/jimjam.html",
 		blurb: "A virtual sleepover with the Bitsy community! Each guest contributed a sprite of themselves to come to the party along with a tile and item. \n \n Organized by @Electronicbeth \n \n Music by Lenny and BedWords. \n \n Party Guests: Lenny, Ducklingsmith, AshGary (special thanks for coming up with the name Jim Jam!), Onion, Em, Spdrcstl, Candle, Claire Morley, Jctwood, Adam Le Doux, Ayolland, Emma, Unity, Tim, Haraiva, Meowchelle, Life on Luna, Fen, Rose, Sarah Gould, Pan, Wyvy, Josie, Leno, Quin, Enui, Hunter, ._a & Ebeth.",
-		colors: ['#FEFDC1', '#D15361'],
+		colors: ['#FEFDC1', '#9b2c39'],
 	},
 	camp: {
 		title: "Bitsy Camp",
