@@ -136,6 +136,27 @@ body {
 	margin-bottom: 0.5rem;
 }
 
+#game_info_blurb {
+	white-space: pre-wrap;
+}
+
+#game_info_blurb ul {
+	font-size: 75%;
+	list-style: none;
+	line-height: 0.5;
+	padding: 0;
+	margin: 0;
+}
+
+#game_info_blurb li {
+	padding: 0;
+	margin: 0;
+}
+
+#game_info_blurb li::before {
+	content: '-*- ';
+}
+
 #game_select {
 	flex: 4;
 	height: 100%;

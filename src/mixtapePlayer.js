@@ -128,7 +128,7 @@ function selectGame(gameId, timer) {
 	document.getElementById("game_info_title").innerText = game.title;
 	document.getElementById("game_info_author").innerHTML = game.author;
 	//	document.getElementById("game_info_img").src = "images/" + gameId + ".gif";
-	document.getElementById("game_info_blurb").innerText = game.blurb;
+	document.getElementById("game_info_blurb").innerHTML = game.blurb.trim();
 
 	//	document.getElementById("game_info_portfolio_link").href = game.portfolio;
 	//	document.getElementById("game_info_portfolio_author").innerHTML = game.author;
