@@ -333,7 +333,7 @@ if (!gamepads) {
 		if (gamepads.isJustDown(gamepads.DPAD_UP) || gamepads.axisJustPast(gamepads.LSTICK_V, -0.5, -1)) {
 			y -= 1;
 		}
-		if (gamepads.isJustDown(gamepads.A) || gamepads.isJustDown(gamepads.START)) {
+		if (gamepads.isJustDown(gamepads.A) || gamepads.isJustDown(gamepads.B) || gamepads.isJustDown(gamepads.X) || gamepads.isJustDown(gamepads.Y) || gamepads.isJustDown(gamepads.START)) {
 			confirm = true;
 		}
 		if (gamepads.isJustDown(gamepads.BACK)) {
