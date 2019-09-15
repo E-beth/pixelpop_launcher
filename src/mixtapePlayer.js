@@ -223,11 +223,11 @@ function onInput({
 	}
 	if (y > 0) {
 		const card = document.getElementById("card_" + selectedGameId);
-		const { x: cx } = card.getBoundingClientRect();
+		const cx = card.offsetLeft;
 		const offset = Array.from(card.parentElement.children).indexOf(card);
 		for (let i = 1; i < card.parentElement.childElementCount; ++i) {
 			const target = card.parentElement.children[(offset+i)%card.parentElement.childElementCount];
-			const { x: tx } = target.getBoundingClientRect();
+			const tx = target.offsetLeft;
 			if (tx === cx) {
 				target.focus();
 				break;
@@ -235,7 +235,7 @@ function onInput({
 		}
 	} else if (y < 0) {
 		const card = document.getElementById("card_" + selectedGameId);
-		const { x: cx } = card.getBoundingClientRect();
+		const cx = card.offsetLeft;
 		const offset = Array.from(card.parentElement.children).indexOf(card);
 		for (let i = 1; i < card.parentElement.childElementCount; ++i) {
 			let idx = offset-i;
@@ -243,7 +243,7 @@ function onInput({
 				idx += card.parentElement.childElementCount;
 			}
 			const target = card.parentElement.children[idx];
-			const { x: tx } = target.getBoundingClientRect();
+			const tx = target.offsetLeft;
 			if (tx === cx) {
 				target.focus();
 				break;
@@ -268,38 +268,43 @@ function onInput({
 }
 
 // keyboard input
-window.addEventListener('keydown', function ({
-	key
-}) {
+window.addEventListener('keydown', function (event) {
+	const { key } = event;
 	switch (key) {
 		case 'd':
 		case 'ArrowRight':
+			event.preventDefault();
 			return onInput({
 				x: 1
 			});
 		case 'a':
 		case 'ArrowLeft':
+			event.preventDefault();
 			return onInput({
 				x: -1
 			});
 		case 'w':
 		case 'ArrowUp':
+			event.preventDefault();
 			return onInput({
 				y: -1
 			});
 		case 's':
 		case 'ArrowDown':
+			event.preventDefault();
 			return onInput({
 				y: 1
 			});
 		case 'z':
 		case 'Enter':
 		case ' ':
+			event.preventDefault();
 			return onInput({
 				confirm: true
 			});
 		case 'x':
 		case 'Escape':
+			event.preventDefault();
 			return onInput({
 				cancel: true
 			});
