@@ -161,7 +161,7 @@ body {
 	flex: 4;
 	height: 100%;
 	display: grid;
-	grid-gap: 1rem;
+	grid-gap: 0.5rem;
 	grid-auto-rows: min-content;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
@@ -261,6 +261,11 @@ body {
 	contain: content;
 	display: flex;
 	flex-direction: column;
+	filter: contrast(50%) grayscale(100%) brightness(25%);
+	transform: scale(0.9);
+	transition:
+		filter 0.4s ease-in-out,
+		transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .game_card>*:not(:last-child) {
@@ -287,6 +292,8 @@ body {
 .selected_card {
 	border-color: white;
 	outline: solid 4px black;
+	filter: none;
+	transform: none;
 }
 
 .selected_card:hover {
