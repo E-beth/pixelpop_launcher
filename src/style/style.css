@@ -1,3 +1,7 @@
+html {
+	zoom: 150%;
+}
+
 /* border-box everything for easier dev */
 * {
 	-webkit-box-sizing: border-box;
@@ -132,23 +136,38 @@ body {
 	margin-bottom: 0.5rem;
 }
 
-#game_select {
-	flex: 3;
-	height: 100%;
-	display: grid;
-	grid-gap: 1rem;
-	grid-auto-rows: min-content;
-	grid-template-columns: repeat(4, 1fr);
+#game_info_blurb {
+	white-space: pre-wrap;
 }
 
-@media only screen and (max-width: 50rem) {
-	#game_select {
-		grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
-	}
+#game_info_blurb ul {
+	font-size: 75%;
+	list-style: none;
+	line-height: 0.5;
+	padding: 0;
+	margin: 0;
+}
+
+#game_info_blurb li {
+	padding: 0;
+	margin: 0;
+}
+
+#game_info_blurb li::before {
+	content: '-*- ';
+}
+
+#game_select {
+	flex: 4;
+	height: 100%;
+	display: grid;
+	grid-gap: 0.5rem;
+	grid-auto-rows: min-content;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 #game_info {
-	flex: 2;
+	flex: 3;
 	max-width: 40rem;
 }
 
@@ -242,6 +261,11 @@ body {
 	contain: content;
 	display: flex;
 	flex-direction: column;
+	filter: contrast(50%) grayscale(100%) brightness(25%);
+	transform: scale(0.9);
+	transition:
+		filter 0.4s ease-in-out,
+		transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .game_card>*:not(:last-child) {
@@ -268,6 +292,8 @@ body {
 .selected_card {
 	border-color: white;
 	outline: solid 4px black;
+	filter: none;
+	transform: none;
 }
 
 .selected_card:hover {

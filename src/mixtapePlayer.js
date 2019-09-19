@@ -128,7 +128,7 @@ function selectGame(gameId, timer) {
 	document.getElementById("game_info_title").innerText = game.title;
 	document.getElementById("game_info_author").innerHTML = game.author;
 	//	document.getElementById("game_info_img").src = "images/" + gameId + ".gif";
-	document.getElementById("game_info_blurb").innerText = game.blurb;
+	document.getElementById("game_info_blurb").innerHTML = game.blurb.trim();
 
 	//	document.getElementById("game_info_portfolio_link").href = game.portfolio;
 	//	document.getElementById("game_info_portfolio_author").innerHTML = game.author;
@@ -223,11 +223,11 @@ function onInput({
 	}
 	if (y > 0) {
 		const card = document.getElementById("card_" + selectedGameId);
-		const { x: cx } = card.getBoundingClientRect();
+		const cx = card.offsetLeft;
 		const offset = Array.from(card.parentElement.children).indexOf(card);
 		for (let i = 1; i < card.parentElement.childElementCount; ++i) {
 			const target = card.parentElement.children[(offset+i)%card.parentElement.childElementCount];
-			const { x: tx } = target.getBoundingClientRect();
+			const tx = target.offsetLeft;
 			if (tx === cx) {
 				target.focus();
 				break;
@@ -235,7 +235,7 @@ function onInput({
 		}
 	} else if (y < 0) {
 		const card = document.getElementById("card_" + selectedGameId);
-		const { x: cx } = card.getBoundingClientRect();
+		const cx = card.offsetLeft;
 		const offset = Array.from(card.parentElement.children).indexOf(card);
 		for (let i = 1; i < card.parentElement.childElementCount; ++i) {
 			let idx = offset-i;
@@ -243,7 +243,7 @@ function onInput({
 				idx += card.parentElement.childElementCount;
 			}
 			const target = card.parentElement.children[idx];
-			const { x: tx } = target.getBoundingClientRect();
+			const tx = target.offsetLeft;
 			if (tx === cx) {
 				target.focus();
 				break;
@@ -268,38 +268,43 @@ function onInput({
 }
 
 // keyboard input
-window.addEventListener('keydown', function ({
-	key
-}) {
+window.addEventListener('keydown', function (event) {
+	const { key } = event;
 	switch (key) {
 		case 'd':
 		case 'ArrowRight':
+			event.preventDefault();
 			return onInput({
 				x: 1
 			});
 		case 'a':
 		case 'ArrowLeft':
+			event.preventDefault();
 			return onInput({
 				x: -1
 			});
 		case 'w':
 		case 'ArrowUp':
+			event.preventDefault();
 			return onInput({
 				y: -1
 			});
 		case 's':
 		case 'ArrowDown':
+			event.preventDefault();
 			return onInput({
 				y: 1
 			});
 		case 'z':
 		case 'Enter':
 		case ' ':
+			event.preventDefault();
 			return onInput({
 				confirm: true
 			});
 		case 'x':
 		case 'Escape':
+			event.preventDefault();
 			return onInput({
 				cancel: true
 			});
@@ -333,7 +338,7 @@ if (!gamepads) {
 		if (gamepads.isJustDown(gamepads.DPAD_UP) || gamepads.axisJustPast(gamepads.LSTICK_V, -0.5, -1)) {
 			y -= 1;
 		}
-		if (gamepads.isJustDown(gamepads.A) || gamepads.isJustDown(gamepads.START)) {
+		if (gamepads.isJustDown(gamepads.A) || gamepads.isJustDown(gamepads.B) || gamepads.isJustDown(gamepads.X) || gamepads.isJustDown(gamepads.Y) || gamepads.isJustDown(gamepads.START)) {
 			confirm = true;
 		}
 		if (gamepads.isJustDown(gamepads.BACK)) {
